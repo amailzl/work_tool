@@ -4,9 +4,9 @@ import os
 import getopt
 
 def exct_logger_full_tag(arg):
-    # os.system("adb shell setprop persist.iauto.log.switch 31")
-    # os.system("adb shell setprop persist.log.tag S")
-    # os.system("adb shell logcat -G 20m")
+    os.system("adb shell setprop persist.iauto.log.switch 31")
+    os.system("adb shell setprop persist.log.tag S")
+    os.system("adb logcat -G 20m")
     tags = arg.split(',', -1)
     print(tags)
     for tag in tags:
@@ -15,7 +15,7 @@ def exct_logger_full_tag(arg):
         print (open_log)
         os.system(open_log)
 
-    logtag = "adb shell logcat -s "
+    logtag = "adb logcat -s "
     logtag = logtag + arg.replace(',', ' ')
     print(logtag)
     os.system(logtag)
@@ -23,8 +23,8 @@ def exct_logger_full_tag(arg):
 def exct_logger_hotKey(arg):
     os.system("adb shell setprop persist.iauto.log.switch 31")
     os.system("adb shell setprop persist.log.tag S")
-    os.system("adb shell logcat -G 20m")
-    logtag = "adb shell logcat -s"
+    os.system("adb logcat -G 20m")
+    logtag = "adb logcat -s"
     if "rs" in arg:
         logtag = logtag + " FW_SVC_RADIO"
         os.system("adb shell setprop persist.log.tag.FW_SVC_RADIO V")
@@ -59,6 +59,7 @@ def exct_logger_hotKey(arg):
         os.system("adb shell setprop persist.log.tag V")
     if "F" in arg:
         os.system("adb shell setprop persist.log.tag V")
+        logtag = "adb logcat"
     print(logtag)
     os.system(logtag)
 
@@ -91,7 +92,9 @@ def exct_test_runner_cmd(arg):
     os.system("rm -rf ./1_report/*")
     os.system("adb pull /data/user/0/com.iauto." + testUnit + ".tests/files/coverage.ec ./1_report/coverage.ec")
     os.system("java -jar out/soong/host/linux-x86/framework/jacoco-cli.jar report --classfiles out/target/common/obj/APPS/" + testUnit + "_unit_test_intermediates/jacoco/report-resources/jacoco-report-classes.jar --html 1_report/ --sourcefiles  ivi/frameworks/service/"+ testUnit +"/java/M --name coverage 1_report/coverage.ec ")
-    # os.system("java -jar out/soong/host/linux-x86/framework/jacoco-cli.jar report --classfiles out/target/common/obj/APPS/" + testUnit + "_unit_test_intermediates/jacoco/report-resources/jacoco-report-classes.jar --html 1_report/ --sourcefiles  ivi/vendor/kaola/kaolafm/plugin/RadioPlugin/java/ --name coverage 1_report/coverage.ec ")
+    # print("java -jar out/soong/host/linux-x86/framework/jacoco-cli.jar report --classfiles out/target/common/obj/JAVA_LIBRARIES/com.iauto.radio_intermediates/jacoco/report-resources/jacoco-report-classes.jar --html 1_report/ --sourcefiles  ivi/frameworks/service/"+ testUnit +"/api --name coverage 1_report/coverage.ec ")
+    # os.system("java -jar out/soong/host/linux-x86/framework/jacoco-cli.jar report --classfiles out/target/common/obj/JAVA_LIBRARIES/com.iauto.radio_intermediates/jacoco/report-resources/jacoco-report-classes.jar --html 1_report/ --sourcefiles  ivi/frameworks/service/"+ testUnit +"/api --name coverage 1_report/coverage.ec ")
+    # os.system("java -jar out/soong/host/linux-x86/framework/jacoco-cli.jar report --classfiles out/target/common/obj/APPS/" + testUnit + "_unit_test_intermediates/jacoco/report-resources/jacoco-report-classes.jar --html 1_report/ --sourcefiles  ivi/vendor/kaola/kaolafm/plugin/RadioPlugin/java/M/ --name coverage 1_report/coverage.ec ")
     os.system("firefox ./1_report/index.html&")
 
 def exct_apk_installer_cmd():
@@ -109,6 +112,7 @@ def main(argv):
         if opt == '-h':
             print('usage -f <func> -a <args>')
             print('or: usage --func=<func> --args=<args>')
+            print('F : logger full tag')
             print('1 : logger')
             print('2 : test_runner')
             print('3 : apk_installer')
@@ -148,7 +152,8 @@ def main(argv):
     if func == "4":
         print('\ntip 1: [change bsp to normal]\n\tbsp set -m 0\n')
         print('\ntip 2: [close avb]\n\tfastboot flash vbmeta_a vbmeta.img --disable-verity\n\tfastboot flashing unlock\n')
-        print('\ntip 3: [log clear]\n\t BLOCK:setprop persist.log.tag S\n\t OPEN: setprop persist.log.tag.LOGTAG V\n')
+        print('\ntip 3: [log clear]\n\tBLOCK:setprop persist.log.tag S\n\tOPEN: setprop persist.log.tag.LOGTAG V\n')
+        print('\ntip 4: [clear port output]\n\tsu\n\techo 0 > /proc/sys/kernel/printk\n')
     if func == "5":
         print('\ntip 1: [jar unit test]\n\tm EMMA_INSTRUMENT=true EMMA_INSTRUMENT_FRAMEWORK=true SKIP_BOOT_JARS_CHECK=true WITH_DEXPREOPT=false -j8\n')
     if func == "6":
