@@ -1,0 +1,115 @@
+#!/bin/bash
+
+function_print_usage(){
+	echo "*********************************"
+	echo "         worker ver0.01          "
+	echo "*********************************"
+	echo "usage :                         "
+	echo "sync: setup PATH              "
+	echo "init: init PATH              "
+	echo "sshl: login to wm server      "
+	echo "fsys: replace system.img      "
+	echo "pull                           "
+	echo "	-systemUI                "
+	echo "push [srcdir] [dstdir]         "
+	echo "*********************************"
+
+}
+
+function_sync(){
+	echo "set PATH to ${local_bin}/"
+	sudo cp -r ./* ${python_entry}/MYPATHPY/* ${local_bin}
+}
+
+function_init(){
+	echo "start python init"
+	python3 ${local_bin}/envsetup.py
+	echo "aliases file generating"
+	cp ${python_entry}/OUT/.bash_aliases_py_clone ~/.bash_aliases
+	echo "file generating complete"
+	
+	echo 'run "source ~/.bash_aliases" to finish init'
+}
+
+function_ssh_login(){
+	echo 'sshpass -p "admin" ssh ws@10.2.32.46'
+	sshpass -p "admin" ssh ws@10.2.32.46
+}
+
+function_fastboot_systemimg(){
+	fastboot_perform_dir=${fastboot_root_dir}/flashrootdir/fastboot/
+	echo ${fastboot_root_dir}/flashrootdir/fastboot/
+	rm -rf ${fastboot_perform_dir}/system.img
+	echo 'old system.img removed'
+	echo '...'
+	echo 'cp new system.img from server'
+	sshpass -p "admin" scp  ws@10.2.32.46:/raid/work/yueqiao.liu/ASE-3/android15.1_2/out/target/product/msmnile_gvmq/system.img ${fastboot_perform_dir}
+	echo 'cp finished'
+}
+
+function_replace_systemUI(){
+	rm -rf ${systemUI_dir}/*
+	echo 'old systemUI.apk removed'
+	echo '...'
+	echo 'pull new systemUI.apk from server'
+	echo 'be aware systemUI.apk should be signed before pull from server'
+	sshpass -p "admin" scp  ws@10.2.32.46:/raid/work/yueqiao.liu/ASE-3/android15.1_2/mysign/signapk/SystemUI.apk ${systemUI_dir}
+	echo 'pull finished'
+
+	function_adb_push ${systemUI_dir}/SystemUI.apk ${product_systemUI_dir}
+}
+
+function_exit(){
+	if [ $1 == "0" ]; then
+		echo "some param is outdated"
+		echo "can't excute before update"
+	elif [ $1 == "1" ]; then
+		echo "param unmatch"
+		echo 'run "worker -h" for right usage'
+	fi
+	exit 0
+}
+
+function_adb_push(){
+	if [[ $1 == "" ]]||[[ $1 == " " ]]||[[ $1 == "-h" ]]; then
+		function_exit 1
+	elif [[ $2 == "" ]]||[[ $2 == " " ]]||[[ $2 == "-h" ]]; then
+		function_exit 1
+	fi
+	echo 'adb root'
+	adb root
+	echo 'adb remount'
+	adb remount
+	echo 'adb push' $1 $2
+	adb push $1 $2
+	echo 'adb shell sync'
+	adb shell sync
+	echo 'adb reboot'
+	adb reboot
+}
+
+fastboot_root_dir='/home/amai/1.project/x.Release'
+systemUI_dir='/home/amai/1.project/x.Release/1.systemUIflashdir'
+product_systemUI_dir='system/priv-app/SystemUI'
+mygithub_entry="/home/amai/Work/MY-github"
+python_entry=${mygithub_entry}/work_tool/python
+local_bin="/usr/local/bin"
+
+if [[ $1 == "" ]]||[[ $1 == " " ]]||[[ $1 == "-h" ]]; then
+	function_print_usage
+elif [ $1 == "sync" ]; then
+	function_sync
+elif [ $1 == "init" ]; then
+	function_init
+elif [ $1 == "sshl" ]; then
+	function_ssh_login
+elif [ $1 == "fsys" ]; then
+	function_exit
+	function_fastboot_systemimg
+elif [ $1 == "pull" -a $2 == "systemUI" ]; then
+	function_exit 0
+	function_replace_systemUI
+elif [ $1 == "push" ]; then
+	function_adb_push $2 $3
+fi
+

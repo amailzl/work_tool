@@ -1,0 +1,59 @@
+#!/bin/bash
+
+function_print_usage(){
+	echo "**********************************"
+	echo "*         apath ver0.01         *"
+	echo "**********************************"
+	echo "usage :                         "
+	echo "W: workroot "
+	echo "A3: ase3_dir      "
+	echo "A: apliroot      "
+	echo "b: local bin path      "
+	echo "w: worker_dir      "
+	echo "as: android-studio bin      "
+	echo "sh: shell script dir      "
+	echo "py: python script dir       "
+	echo "**********************************"
+
+}
+
+
+shpathroot="/usr/local/bin"
+amairoot="/home/amai"
+workroot=${amairoot}/Work
+ase3_dir=${workroot}/WM-motor/project/ASE-3
+worker_dir=${workroot}/MY-github/work_tool/shell/MYPATHSHELL
+apliroot=${amairoot}/Applications
+asstartdir="/home/amai/Applications/1.AndroidStudio/android-studio/bin"
+shell_dir=${workroot}/MY-github/work_tool/shell
+python_dir=${workroot}/MY-github/work_tool/python
+
+
+if [[ $1 == "" ]]||[[ $1 == " " ]]||[[ $1 == "-h" ]]; then
+	function_print_usage
+elif [ $1 == "W" ]; then
+	echo "gopath $workroot"
+	cd $workroot
+elif [ $1 == "A3" ]; then
+	echo "gopath $ase3_dir"
+	cd $ase3_dir
+elif [ $1 == "A" ]; then
+	echo "gopath $apliroot"
+	cd $apliroot
+elif [ $1 == "b" ]; then
+	echo "gopath $shpathroot"
+	cd $shpathroot
+elif [ $1 == "w" ]; then
+	echo "gopath $worker_dir"
+	cd $worker_dir
+elif [ $1 == "as" ]; then
+	echo "gopath $asstartdir"
+	cd $asstartdir
+elif [ $1 == "sh" ]; then
+	echo "gopath $shell_dir"
+	cd $shell_dir
+elif [ $1 == "py" ]; then
+	echo "gopath $python_dir"
+	cd $python_dir
+fi
+

@@ -1,0 +1,50 @@
+/**
+* Copyright @ 2017 - 2020 iAUTO(Shanghai) Co., Ltd.
+* All Rights Reserved.
+*
+* Redistribution and use in source and binary forms, with or without
+* modification, are NOT permitted except as agreed by
+* iAUTO(Shanghai) Co., Ltd.
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+*/
+
+package ;
+
+import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
+import java.lang.reflect.Method;
+import java.lang.reflect.Constructor;
+import java.lang.*;
+import java.lang.Exception;
+import java.lang.IllegalAccessException;
+import java.util.NoSuchElementException;
+import java.io.PrintWriter;
+import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.HashMap;
+import android.content.Context;
+import android.os.IBinder;
+import android.support.annotation.VisibleForTesting;
+import android.os.RemoteException;
+import android.os.Looper;
+import android.os.Handler;
+import android.util.Log;
+import android.util.Log;
+import android.os.IBinder;
+import android.os.IHwBinder;
+import android.support.test.InstrumentationRegistry;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.Assert;
+import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.junit.MockitoJUnitRunner;
+import static org.junit.Assert.*;
+import static org.mockito.Mockito.*;
+
