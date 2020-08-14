@@ -37,8 +37,8 @@ function_ssh_login(){
 }
 
 function_fastboot_systemimg(){
-	fastboot_perform_dir=${fastboot_root_dir}/flashrootdir/fastboot/
-	echo ${fastboot_root_dir}/flashrootdir/fastboot/
+	fastboot_perform_dir=${release_root_dir}/fastboot/
+	echo ${fastboot_perform_dir}
 	rm -rf ${fastboot_perform_dir}/system.img
 	echo 'old system.img removed'
 	echo '...'
@@ -88,8 +88,8 @@ function_adb_push(){
 	adb reboot
 }
 
-fastboot_root_dir='/home/amai/1.project/x.Release'
-systemUI_dir='/home/amai/1.project/x.Release/1.systemUIflashdir'
+release_root_dir='/home/amai/Work/WM-motor/project/ASE-3/releasedir'
+systemUI_dir='/home/amai/Work/WM-motor/project/ASE-3/releasedir/systemUI_dir'
 product_systemUI_dir='system/priv-app/SystemUI'
 mygithub_entry="/home/amai/Work/MY-github"
 python_entry=${mygithub_entry}/work_tool/python
@@ -104,10 +104,9 @@ elif [ $1 == "init" ]; then
 elif [ $1 == "sshl" ]; then
 	function_ssh_login
 elif [ $1 == "fsys" ]; then
-	function_exit
 	function_fastboot_systemimg
 elif [ $1 == "pull" -a $2 == "systemUI" ]; then
-	function_exit 0
+	# function_exit 0
 	function_replace_systemUI
 elif [ $1 == "push" ]; then
 	function_adb_push $2 $3

@@ -1,0 +1,83 @@
+#!/bin/bash
+
+release_root_dir='/home/amai/Work/WM-motor/project/ASE-3/releasedir'
+fwlib_dir=${release_root_dir}/fwlib
+
+echo "rm PATH ${fwlib_dir}/"
+rm -rf ${fwlib_dir}/*
+mkdir ${fwlib_dir}/arm
+echo "mkdir ${fwlib_dir}/arm"
+mkdir ${fwlib_dir}/arm64
+echo "mkdir ${fwlib_dir}/arm64"
+
+echo "start copy fw frome server 0%"
+sshpass -p "admin" scp  ws@10.2.32.46:/raid/work/yueqiao.liu/ASE-3/android15.1_2/mysign/signapk/framework.jar  ${fwlib_dir}
+echo "... 5%"
+sshpass -p "admin" scp  ws@10.2.32.46:/raid/work/yueqiao.liu/ASE-3/android15.1_2/mysign/signapk/boot-framework.vdex  ${fwlib_dir}
+echo "... 10%"
+sshpass -p "admin" scp  ws@10.2.32.46:/raid/work/yueqiao.liu/ASE-3/android15.1_2/mysign/signapk/arm/boot-framework.art  ${fwlib_dir}/arm
+echo "... 15%"
+sshpass -p "admin" scp  ws@10.2.32.46:/raid/work/yueqiao.liu/ASE-3/android15.1_2/mysign/signapk/arm/boot-framework.art.rel  ${fwlib_dir}/arm
+echo "... 20%"
+sshpass -p "admin" scp  ws@10.2.32.46:/raid/work/yueqiao.liu/ASE-3/android15.1_2/mysign/signapk/arm/boot-framework.oat  ${fwlib_dir}/arm
+echo "... 25%"
+sshpass -p "admin" scp  ws@10.2.32.46:/raid/work/yueqiao.liu/ASE-3/android15.1_2/mysign/signapk/arm/boot.art  ${fwlib_dir}/arm
+echo "... 30%"
+sshpass -p "admin" scp  ws@10.2.32.46:/raid/work/yueqiao.liu/ASE-3/android15.1_2/mysign/signapk/arm/boot.art.rel  ${fwlib_dir}/arm
+echo "... 35%"
+sshpass -p "admin" scp  ws@10.2.32.46:/raid/work/yueqiao.liu/ASE-3/android15.1_2/mysign/signapk/arm/boot.oat  ${fwlib_dir}/arm
+echo "... 40%"
+
+sshpass -p "admin" scp  ws@10.2.32.46:/raid/work/yueqiao.liu/ASE-3/android15.1_2/mysign/signapk/arm64/boot-framework.art  ${fwlib_dir}/arm64
+echo "... 50%"
+sshpass -p "admin" scp  ws@10.2.32.46:/raid/work/yueqiao.liu/ASE-3/android15.1_2/mysign/signapk/arm64/boot-framework.art.rel  ${fwlib_dir}/arm64
+echo "... 60%"
+sshpass -p "admin" scp  ws@10.2.32.46:/raid/work/yueqiao.liu/ASE-3/android15.1_2/mysign/signapk/arm64/boot-framework.oat  ${fwlib_dir}/arm64
+echo "... 70%"
+sshpass -p "admin" scp  ws@10.2.32.46:/raid/work/yueqiao.liu/ASE-3/android15.1_2/mysign/signapk/arm64/boot.art  ${fwlib_dir}/arm64
+echo "... 80%"
+sshpass -p "admin" scp  ws@10.2.32.46:/raid/work/yueqiao.liu/ASE-3/android15.1_2/mysign/signapk/arm64/boot.art.rel  ${fwlib_dir}/arm64
+echo "... 90%"
+sshpass -p "admin" scp  ws@10.2.32.46:/raid/work/yueqiao.liu/ASE-3/android15.1_2/mysign/signapk/arm64/boot.oat  ${fwlib_dir}/arm64
+echo "complete 100%"
+
+adb root
+echo "adb root"
+adb remount
+echo "adb remount"
+
+echo "start push fw to product 0%"
+adb push ${fwlib_dir}/framework.jar system/framework
+echo "... 5%"
+adb push ${fwlib_dir}/boot-framework.vdex system/framework
+echo "... 10%"
+adb push ${fwlib_dir}/arm/boot-framework.art system/framework/arm
+echo "... 15%"
+adb push ${fwlib_dir}/arm/boot-framework.art.rel system/framework/arm
+echo "... 20%"
+adb push ${fwlib_dir}/arm/boot-framework.oat system/framework/arm
+echo "... 25%"
+adb push ${fwlib_dir}/arm/boot.art system/framework/arm
+echo "... 30%"
+adb push ${fwlib_dir}/arm/boot.art.rel system/framework/arm
+echo "... 35%"
+adb push ${fwlib_dir}/arm/boot.oat system/framework/arm
+
+echo "... 40%"
+adb push ${fwlib_dir}/arm64/boot-framework.art system/framework/arm64
+echo "... 50%"
+adb push ${fwlib_dir}/arm64/boot-framework.art.rel system/framework/arm64
+echo "... 60%"
+adb push ${fwlib_dir}/arm64/boot-framework.oat system/framework/arm64
+echo "... 70%"
+adb push ${fwlib_dir}/arm64/boot.art system/framework/arm64
+echo "... 80%"
+adb push ${fwlib_dir}/arm64/boot.art.rel system/framework/arm64
+echo "... 90%"
+adb push ${fwlib_dir}/arm64/boot.oat system/framework/arm64
+echo "complete 100%"
+
+adb shell sync
+echo "adb sync"
+adb reboot
+echo "adb reboot"

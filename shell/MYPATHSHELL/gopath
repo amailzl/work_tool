@@ -2,7 +2,7 @@
 
 function_print_usage(){
 	echo "**********************************"
-	echo "*         apath ver0.01         *"
+	echo "*         gopath ver0.01         *"
 	echo "**********************************"
 	echo "usage :                         "
 	echo "W: workroot "
@@ -13,11 +13,13 @@ function_print_usage(){
 	echo "as: android-studio bin      "
 	echo "sh: shell script dir      "
 	echo "py: python script dir       "
+	echo "fl: flash device dir       "
+	# token1
 	echo "**********************************"
 
 }
 
-
+# token2-c
 shpathroot="/usr/local/bin"
 amairoot="/home/amai"
 workroot=${amairoot}/Work
@@ -27,10 +29,13 @@ apliroot=${amairoot}/Applications
 asstartdir="/home/amai/Applications/1.AndroidStudio/android-studio/bin"
 shell_dir=${workroot}/MY-github/work_tool/shell
 python_dir=${workroot}/MY-github/work_tool/python
-
+flash_dir=${ase3_dir}/releasedir/fastboot
+# token2
+ 
 
 if [[ $1 == "" ]]||[[ $1 == " " ]]||[[ $1 == "-h" ]]; then
 	function_print_usage
+# toke 3-c
 elif [ $1 == "W" ]; then
 	echo "gopath $workroot"
 	cd $workroot
@@ -55,5 +60,9 @@ elif [ $1 == "sh" ]; then
 elif [ $1 == "py" ]; then
 	echo "gopath $python_dir"
 	cd $python_dir
+elif [ $1 == "fl" ]; then
+	echo "gopath $flash_dir"
+	cd $flash_dir
+# token3
 fi
 
