@@ -1,10 +1,11 @@
 #!/bin/bash
 
 function_print_usage(){
-	echo "**********************************"
-	echo "*         gopath ver0.01         *"
-	echo "**********************************"
+	echo "*****************************************************************"
+	echo "*                      gopath ver0.01                           *"
+	echo "*****************************************************************"
 	echo "usage :                         "
+	echo "add [alias] [absPATH]: add path as gop command           "
 	echo "W: workroot "
 	echo "A3: ase3_dir      "
 	echo "A: apliroot      "
@@ -15,11 +16,15 @@ function_print_usage(){
 	echo "py: python script dir       "
 	echo "fl: flash device dir       "
 	# token1
-	echo "**********************************"
+	echo "*****************************************************************"
 
 }
 
-# token2-c
+function_add_usage(){
+	echo "parse args to python script"
+	pcd -f agop -a $1,$2
+}
+
 shpathroot="/usr/local/bin"
 amairoot="/home/amai"
 workroot=${amairoot}/Work
@@ -35,7 +40,8 @@ flash_dir=${ase3_dir}/releasedir/fastboot
 
 if [[ $1 == "" ]]||[[ $1 == " " ]]||[[ $1 == "-h" ]]; then
 	function_print_usage
-# toke 3-c
+elif [ $1 == "add" ]; then
+	function_add_usage $2 $3
 elif [ $1 == "W" ]; then
 	echo "gopath $workroot"
 	cd $workroot

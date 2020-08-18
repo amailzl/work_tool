@@ -18,7 +18,7 @@ function_print_usage(){
 
 function_sync(){
 	echo "set PATH to ${local_bin}/"
-	sudo cp -r ./* ${python_entry}/MYPATHPY/* ${local_bin}
+	sudo cp -rv ${worker_dir}/* ${python_entry}/MYPATHPY/* ${local_bin}
 }
 
 function_init(){
@@ -27,7 +27,6 @@ function_init(){
 	echo "aliases file generating"
 	cp ${python_entry}/OUT/.bash_aliases_py_clone ~/.bash_aliases
 	echo "file generating complete"
-	
 	echo 'run "source ~/.bash_aliases" to finish init'
 }
 
@@ -39,7 +38,7 @@ function_ssh_login(){
 function_fastboot_systemimg(){
 	fastboot_perform_dir=${release_root_dir}/fastboot/
 	echo ${fastboot_perform_dir}
-	rm -rf ${fastboot_perform_dir}/system.img
+	mv -ivn ${fastboot_perform_dir}/system.img
 	echo 'old system.img removed'
 	echo '...'
 	echo 'cp new system.img from server'
@@ -94,6 +93,7 @@ product_systemUI_dir='system/priv-app/SystemUI'
 mygithub_entry="/home/amai/Work/MY-github"
 python_entry=${mygithub_entry}/work_tool/python
 local_bin="/usr/local/bin"
+worker_dir="/home/amai/Work/MY-github/work_tool/shell/MYPATHSHELL"
 
 if [[ $1 == "" ]]||[[ $1 == " " ]]||[[ $1 == "-h" ]]; then
 	function_print_usage
@@ -111,4 +111,3 @@ elif [ $1 == "pull" -a $2 == "systemUI" ]; then
 elif [ $1 == "push" ]; then
 	function_adb_push $2 $3
 fi
-
