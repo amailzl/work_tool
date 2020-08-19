@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import sys
 import re
-from amaifilelib.fileinfo import getlinenumber
+from amaifilelib.exceptionbuilder import exception_builder
 
 # 
 # @param filepath
@@ -15,6 +15,19 @@ def get_file(file) :
         return f
     except IOError:
         print('[IOError] get_file failed: ' + file)
+        exit(2)
+
+# 
+# @param fd
+# 
+# try to close an opened file
+# 
+def close_file(f) :
+    try :
+        f.close()
+        return True
+    except IOError:
+        print('[IOError] file '+ file +'close failed')
         exit(2)
 
 # 
@@ -40,8 +53,10 @@ def get_clear_file(file) :
 # try to add a line at specified linenumber
 # 
 def add_line(file, line, content) :
+    if (line < 0) :
+        exception_builder(3)
     fd = get_file(file)
-    ln = getlinenumber(fd)
+    ln = get_line_number(fd)
     if(line > ln) :
         fd.write(content)
         fd.write("\n")
@@ -72,7 +87,7 @@ def get_line(file, startline, endline = 0) :
     if (startline == endline == 0) :
         return content
     if (startline > endline) :
-        endline = getlinenumber(fd)
+        endline = get_line_number(fd)
     fd.seek(0, 0)
     for line in fd.readlines():
         c = c + 1
@@ -81,19 +96,51 @@ def get_line(file, startline, endline = 0) :
             if (c >= endline):
                 break
     
-    print (content)
+    # print (content)
     return content
 
-    
 # 
 # @param fd
 # 
-# try to close an opened file
+# get line number
 # 
-def close_file(f) :
-    try :
-        f.close()
-        return True
-    except IOError:
-        print('[IOError] file '+ file +'close failed')
-        exit(2)
+def get_line_number(fd) :
+    count = 0
+    fd.seek(0, 0)
+    for line in fd.readlines():
+        count=count+1
+    fd.seek(0, 0)
+    return count
+
+# 
+# @param fd
+# @param token
+# 
+# get token offset
+# 
+def get_token_line(file, token) :
+    # print("finding token : " + token + " in " + file)
+    fd = get_file(file)
+    count = 0
+    find = False
+    fd.seek(0, 0)
+    for line in fd.readlines():
+        count = count + 1
+        if token in line :
+            find = True
+            break
+    fd.seek(0, 0)
+
+    close_file(fd)
+    if(find == False) :
+        return -1
+    else :
+        return count
+
+# 
+# @param token
+# 
+# get file token
+# 
+def token_builder(token) :
+    return ("#token_"+ token)

@@ -1,0 +1,6 @@
+# this file is generated autimatically by script 
+# try to use command to edit this file instead of changing content directly 
+# for script command instruction see /usr/local/bin/readme.txt
+# token = start
+alias gop="source gopath"
+alias pcd="python3 /usr/local/bin/pycommand.py"
