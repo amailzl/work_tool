@@ -70,7 +70,33 @@ def add_line(file, line, content) :
 
     return True
     close_file(fd)
-    
+
+# 
+# @param filepath
+# @param linenumber
+# @return ret
+# 
+# try to del a line at specified linenumber
+# 
+def del_line(file, line) :
+    if (line < 0) :
+        exception_builder(3)
+    fd = get_file(file)
+    ln = get_line_number(fd)
+    if(line > ln) :
+        exception_builder(3)
+    else :
+        prec = get_line(file, 0, line - 1)
+        rearc = get_line(file, line + 1)
+        content = prec + rearc
+        close_file(fd)
+        fd = get_clear_file(file)
+        # print(content)
+        # print('\n')
+        fd.write(content)
+
+    return True
+    close_file(fd)  
 
 # 
 # @param filepath
