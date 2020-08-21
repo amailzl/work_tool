@@ -4,25 +4,44 @@ function_print_usage(){
 	echo "*****************************************************************"
 	echo "*                      gopath ver0.01                           *"
 	echo "*****************************************************************"
-	echo "usage :                         "
-	echo "add [alias] [absPATH]: add path as gop command           "
-	echo "W: workroot "
-	echo "A3: ase3_dir      "
-	echo "A: apliroot      "
-	echo "b: local bin path      "
-	echo "w: worker_dir      "
-	echo "as: android-studio bin      "
-	echo "sh: shell script dir      "
-	echo "py: python script dir       "
-	echo "fl: flash device dir       "
-	# token1
+	echo "func :                         "
+	echo "add [alias] [absPATH] : save 'alias' as a shortcut to absPATH         "
+	echo "del [alias] : remove a saved 'alias' as a shortcut to absPATH         "
+	echo "-----------------------------------------------------------------"
+	#token_W
+	echo "alias :  run \"gop [alias]\" to skip to dir                      "
+	echo "W: ${workroot} "
+	#token_A3
+	echo "A3: ${ase3_dir}      "
+	#token_A
+	echo "A: ${apliroot}      "
+	#token_b
+	echo "b: ${shpathroot}      "
+	#token_w
+	echo "w: ${worker_dir}      "
+	#token_as
+	echo "as: ${asstartdir}      "
+	#token_sh
+	echo "sh: ${shell_dir}     "
+	#token_py
+	echo "py: ${python_dir}      "
+	#token_fl
+	echo "fl: ${flash_dir}       "
+ 	#token_aosp
+	echo "aosp: ${aosp_dir}  "
+	#token_insert_usage
 	echo "*****************************************************************"
 
 }
 
 function_add_usage(){
 	echo "parse args to python script"
-	pcd -f agop -a $1,$2
+	fioc -f agop -a $1,$2
+}
+
+function_del_usage(){
+	echo "parse args to python script"
+	fioc -f dgop -a $1
 }
 
 shpathroot="/usr/local/bin"
@@ -35,13 +54,16 @@ asstartdir="/home/amai/Applications/1.AndroidStudio/android-studio/bin"
 shell_dir=${workroot}/MY-github/work_tool/shell
 python_dir=${workroot}/MY-github/work_tool/python
 flash_dir=${ase3_dir}/releasedir/fastboot
-# token2
+aosp_dir=/home/amai/Work/AOSP
+#token_insert_dir
  
 
 if [[ $1 == "" ]]||[[ $1 == " " ]]||[[ $1 == "-h" ]]; then
 	function_print_usage
 elif [ $1 == "add" ]; then
 	function_add_usage $2 $3
+elif [ $1 == "del" ]; then
+	function_del_usage $2
 elif [ $1 == "W" ]; then
 	echo "gopath $workroot"
 	cd $workroot
@@ -69,6 +91,9 @@ elif [ $1 == "py" ]; then
 elif [ $1 == "fl" ]; then
 	echo "gopath $flash_dir"
 	cd $flash_dir
-# token3
+elif [ $1 == "aosp" ]; then
+	echo "gopath /home/amai/Work/AOSP"
+	cd ${aosp_dir}
+#token_insert_cmd
 fi
 

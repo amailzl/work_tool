@@ -21,6 +21,12 @@ function_sync(){
 	sudo cp -rv ${worker_dir}/* ${python_entry}/MYPATHPY/* ${local_bin}
 }
 
+#hide
+function_sync_gop(){
+	echo "sync gopath script to ${local_bin}/"
+	sudo cp -v ${worker_dir}/gopath ${local_bin}
+}
+
 function_init(){
 	echo "start python init"
 	python3 ${local_bin}/envsetup.py
@@ -55,7 +61,7 @@ function_replace_systemUI(){
 	sshpass -p "admin" scp  ws@10.2.32.46:/raid/work/yueqiao.liu/ASE-3/android15.1_2/mysign/signapk/SystemUI.apk ${systemUI_dir}
 	echo 'pull finished'
 
-	function_adb_push ${systemUI_dir}/SystemUI.apk ${product_systemUI_dir}
+	function_adb_push ${systemUI_dir}/SystemUI.apk ${product_systemUI_dir} systemui
 }
 
 function_exit(){
@@ -83,8 +89,14 @@ function_adb_push(){
 	adb push $1 $2
 	echo 'adb shell sync'
 	adb shell sync
-	echo 'adb reboot'
-	adb reboot
+
+	if [ $3 == "systemui" ]; then
+		echo 'restart service'
+		adb shell kill  $(adb shell ps -fe  |  grep com.android.systemui  |  awk '{print $2}')
+	else
+		echo 'adb reboot'
+		adb reboot
+	fi
 }
 
 release_root_dir='/home/amai/Work/WM-motor/project/ASE-3/releasedir'
@@ -99,6 +111,8 @@ if [[ $1 == "" ]]||[[ $1 == " " ]]||[[ $1 == "-h" ]]; then
 	function_print_usage
 elif [ $1 == "sync" ]; then
 	function_sync
+elif [ $1 == "syncgop" ]; then
+	function_sync_gop
 elif [ $1 == "init" ]; then
 	function_init
 elif [ $1 == "sshl" ]; then
