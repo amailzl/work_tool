@@ -42,9 +42,9 @@ function_ssh_login(){
 }
 
 function_fastboot_systemimg(){
-	fastboot_perform_dir=${release_root_dir}/fastboot/
+	fastboot_perform_dir=${release_root_dir}/fastboot
 	echo ${fastboot_perform_dir}
-	mv -ivn ${fastboot_perform_dir}/system.img
+	mv -iv ${fastboot_perform_dir}/system.img ${release_root_dir}
 	echo 'old system.img removed'
 	echo '...'
 	echo 'cp new system.img from server'
