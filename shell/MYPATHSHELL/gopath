@@ -31,6 +31,10 @@ function_print_usage(){
 	echo "aosp: ${aosp_dir}  "
  	#token_a2
 	echo "a2: ${a2_dir}"
+ 	#token_mg
+	echo "mg: ${mg_dir}"
+ 	#token_asp
+	echo "asp: ${asp_dir}"
 	#token_insert_usage
 	echo "*****************************************************************"
 
@@ -59,6 +63,10 @@ flash_dir=${ase3_dir}/releasedir/fastboot
 aosp_dir=/home/amai/Work/AOSP
 #token_a2
 a2_dir=/home/amai/Work/WM-motor/project/ASE-2/gitdir
+#token_mg
+mg_dir=/home/amai/Work/MY-github/
+#token_asp
+asp_dir=/home/amai/AndroidStudioProjects
 #token_insert_dir
  
 
@@ -102,6 +110,14 @@ elif [ $1 == "aosp" ]; then
 elif [ $1 == "a2" ]; then
 	echo "gopath /home/amai/Work/WM-motor/project/ASE-2/gitdir"
 	cd ${a2_dir}
+#token_mg
+elif [ $1 == "mg" ]; then
+	echo "gopath /home/amai/Work/MY-github/"
+	cd ${mg_dir}
+#token_asp
+elif [ $1 == "asp" ]; then
+	echo "gopath /home/amai/AndroidStudioProjects"
+	cd ${asp_dir}
 #token_insert_cmd
 fi
 

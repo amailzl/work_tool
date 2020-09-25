@@ -9,9 +9,10 @@ function_print_usage(){
 	echo "init: init PATH              "
 	echo "sshl: login to wm server      "
 	echo "fsys: replace system.img      "
-	echo "pull                           "
+	echo "rs: replace systemui                           "
 	echo "	-systemUI                "
 	echo "push [srcdir] [dstdir]         "
+	echo "dumpmem [pid]     "
 	echo "*********************************"
 
 }
@@ -81,10 +82,7 @@ function_adb_push(){
 	elif [[ $2 == "" ]]||[[ $2 == " " ]]||[[ $2 == "-h" ]]; then
 		function_exit 1
 	fi
-	echo 'adb root'
-	adb root
-	echo 'adb remount'
-	adb remount
+	function_adb_ready
 	echo 'adb push' $1 $2
 	adb push $1 $2
 	echo 'adb shell sync'
@@ -99,6 +97,30 @@ function_adb_push(){
 	fi
 }
 
+function_adb_ready(){
+	echo 'adb root'
+	adb root
+	echo 'adb remount'
+	adb remount
+}
+
+function_dumpmem(){
+	if [ $1 == "" ]; then
+		function_exit 1
+	fi
+		
+	echo "---------- dumpsys meminfo start------------" > $worktable/meminfo_out.txt
+	function_adb_ready
+	for (( i = 1; i <= 10; i++ )); do
+		echo "---------- dumpsys meminfo $i ------------"
+		echo "---------- dumpsys meminfo $i start------------" >> $worktable/meminfo_out.txt
+		adb shell dumpsys meminfo $(adb shell ps -fe  |  grep -i $1  |  awk '{print $2}') -d >> $worktable/meminfo_out.txt
+		sleep 0.5
+		echo "---------- dumpsys meminfo $i end------------" >> $worktable/meminfo_out.txt
+	done
+	echo "dumpmem finished"
+}
+
 release_root_dir='/home/amai/Work/WM-motor/project/ASE-3/releasedir'
 systemUI_dir='/home/amai/Work/WM-motor/project/ASE-3/releasedir/systemUI_dir'
 product_systemUI_dir='system/priv-app/SystemUI'
@@ -106,6 +128,7 @@ mygithub_entry="/home/amai/Work/MY-github"
 python_entry=${mygithub_entry}/work_tool/python
 local_bin="/usr/local/bin"
 worker_dir="/home/amai/Work/MY-github/work_tool/shell/MYPATHSHELL"
+worktable='/home/amai/Work/worktable'
 
 if [[ $1 == "" ]]||[[ $1 == " " ]]||[[ $1 == "-h" ]]; then
 	function_print_usage
@@ -122,6 +145,10 @@ elif [ $1 == "fsys" ]; then
 elif [ $1 == "pull" -a $2 == "systemUI" ]; then
 	# function_exit 0
 	function_replace_systemUI
+elif [ $1 == "rs" ]; then
+	function_replace_systemUI
 elif [ $1 == "push" ]; then
 	function_adb_push $2 $3
+elif [ $1 == "dumpmem" ]; then
+	function_dumpmem $2
 fi
