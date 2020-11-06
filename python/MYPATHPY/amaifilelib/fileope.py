@@ -2,6 +2,7 @@
 import sys
 import re
 from amaifilelib.exceptionbuilder import exception_builder
+from amaifilelib.utils import py_out_dir
 
 # 
 # @param filepath
@@ -124,6 +125,23 @@ def get_line(file, startline, endline = 0) :
     
     # print (content)
     return content
+
+# 
+# @param filepath
+# @param keyword
+# @return content
+# 
+# get content containing the keyword
+# 
+def get_line_with_keyword(file, keyword) :
+    fd = get_file(file)
+    index = 0
+    for line in open(file) :
+        for kw in keyword :
+            if kw in line :
+                index = index + 1
+                add_line(py_out_dir + "/" + file, index, line)
+    close_file(fd)
 
 # 
 # @param fd
