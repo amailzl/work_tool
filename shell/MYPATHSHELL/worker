@@ -13,13 +13,14 @@ function_print_usage(){
 	echo "	-systemUI                "
 	echo "push [srcdir] [dstdir]         "
 	echo "dumpmem [pid]     "
+	echo "wt"
 	echo "*********************************"
 
 }
 
 function_sync(){
 	echo "set PATH to ${local_bin}/"
-	sudo cp -rv ${worker_dir}/* ${python_entry}/MYPATHPY/* ${local_bin}
+	sudo cp -rv ${worker_dir}/* ${python_entry}/MYPATHPY/* ${python_entry}/APPS/* ${local_bin}
 }
 
 #hide
@@ -108,7 +109,7 @@ function_dumpmem(){
 	if [ $1 == "" ]; then
 		function_exit 1
 	fi
-		
+
 	echo "---------- dumpsys meminfo start------------" > $worktable/meminfo_out.txt
 	function_adb_ready
 	for (( i = 1; i <= 10; i++ )); do
@@ -119,6 +120,11 @@ function_dumpmem(){
 		echo "---------- dumpsys meminfo $i end------------" >> $worktable/meminfo_out.txt
 	done
 	echo "dumpmem finished"
+}
+
+function_worktable(){
+	python3 ${local_bin}/worktable.py
+	echo "open worktable"
 }
 
 release_root_dir='/home/amai/Work/WM-motor/project/ASE-3/releasedir'
@@ -142,13 +148,15 @@ elif [ $1 == "sshl" ]; then
 	function_ssh_login
 elif [ $1 == "fsys" ]; then
 	function_fastboot_systemimg
-elif [ $1 == "pull" -a $2 == "systemUI" ]; then
-	# function_exit 0
-	function_replace_systemUI
+# elif [ $1 == "pull" -a $2 == "systemUI" ]; then
+# 	# function_exit 0
+# 	function_replace_systemUI
 elif [ $1 == "rs" ]; then
 	function_replace_systemUI
 elif [ $1 == "push" ]; then
 	function_adb_push $2 $3
 elif [ $1 == "dumpmem" ]; then
 	function_dumpmem $2
+elif [ $1 == "wt" ]; then
+	function_worktable
 fi
