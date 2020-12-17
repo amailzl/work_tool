@@ -14,6 +14,7 @@ function_print_usage(){
 	echo "push [srcdir] [dstdir]         "
 	echo "dumpmem [pid]     "
 	echo "wt"
+	echo "gsync"
 	echo "*********************************"
 
 }
@@ -127,6 +128,27 @@ function_worktable(){
 	echo "open worktable"
 }
 
+function_git_sync(){
+echo "git root is "$git_root
+echo "************************************"
+for file in `find . -iname .git` ; do
+ if [ -d $file ]; then
+	cd $file/..
+	echo 'enter dir'
+	pwd
+	git pull
+	echo "************************************"
+	cd ${git_root}
+ fi
+done
+}
+
+# function_git_sync(){
+
+# }
+# # #读取第一个参数
+# # read_dir
+
 release_root_dir='/home/amai/Work/WM-motor/project/ASE-3/releasedir'
 systemUI_dir='/home/amai/Work/WM-motor/project/ASE-3/releasedir/systemUI_dir'
 product_systemUI_dir='system/priv-app/SystemUI'
@@ -135,6 +157,7 @@ python_entry=${mygithub_entry}/work_tool/python
 local_bin="/usr/local/bin"
 worker_dir="/home/amai/Work/MY-github/work_tool/shell/MYPATHSHELL"
 worktable='/home/amai/Work/worktable'
+git_root=$(pwd)
 
 if [[ $1 == "" ]]||[[ $1 == " " ]]||[[ $1 == "-h" ]]; then
 	function_print_usage
@@ -159,4 +182,6 @@ elif [ $1 == "dumpmem" ]; then
 	function_dumpmem $2
 elif [ $1 == "wt" ]; then
 	function_worktable
+elif [ $1 == "gsync" ]; then
+	function_git_sync $1
 fi

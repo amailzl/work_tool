@@ -32,6 +32,7 @@ process_value=[
 
 class Sqlite_Helper():
     def __init__(self) :
+        print ("Opened database successfully")
         self.target_database = sqlite3.connect('/home/amai/Work/DataBase/worktables.db')
 
     def update(self, cmd, t, w, g , c, wid, s = ''):
@@ -62,7 +63,6 @@ class Sqlite_Helper():
         maxp = 0
         maxd = 0
         c = self.target_database.cursor()
-        print ("Opened database successfully")
         retp = c.execute("SELECT MAX(WID) FROM " + sq_tables[0])
         for rp in retp:
             maxp = rp[0]
@@ -98,6 +98,7 @@ class Sqlite_Helper():
 
     def close(self) :
         self.target_database.close()
+        print ("Close database successfully")
 
 class Sub_W():
     def __init__(self,init_window_name,sq_helper,sq_table):

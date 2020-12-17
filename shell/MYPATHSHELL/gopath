@@ -37,6 +37,8 @@ function_print_usage(){
 	echo "asp: ${asp_dir}"
  	#token_d
 	echo "d: ${d_dir}"
+ 	#token_ai
+	echo "ai: ${ai_dir}"
 	#token_insert_usage
 	echo "*****************************************************************"
 
@@ -71,6 +73,8 @@ mg_dir=/home/amai/Work/MY-github/
 asp_dir=/home/amai/AndroidStudioProjects
 #token_d
 d_dir=/home/amai/Work/DataBase/
+#token_ai
+ai_dir=/home/amai/Work/MY-github/AI
 #token_insert_dir
  
 
@@ -126,6 +130,10 @@ elif [ $1 == "asp" ]; then
 elif [ $1 == "d" ]; then
 	echo "gopath /home/amai/Work/DataBase/"
 	cd ${d_dir}
+#token_ai
+elif [ $1 == "ai" ]; then
+	echo "gopath /home/amai/Work/MY-github/AI"
+	cd ${ai_dir}
 #token_insert_cmd
 fi
 
