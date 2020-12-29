@@ -15,9 +15,10 @@ gopathfile = "/home/amai/Work/MY-github/work_tool/shell/MYPATHSHELL/gopath"
 
 def add_gop(sharg):
     if (sharg == "") :
-        exception_builder(0)       
-    
+        exception_builder(0)
+
     args = sharg.split(',', -1)
+    print('func: add gopath shortcuts cmd "gop ' + args[0] + '" refer to gopath ' + args[1])
     if (len(args) != 2) :
         exception_builder(0)
     if (os.path.exists(args[1])) :
@@ -39,10 +40,10 @@ def add_gop(sharg):
                 print("... add cmd to gopath script")
                 add_line(gopathfile, get_token_line(gopathfile,  "#token_insert_cmd"), cmd_line)
             except UserWarning:
-                print(hint_builder("gopath file has been compromised", "re-install or add token to source file")) 
+                print(hint_builder("gopath file has been compromised", "re-install or add token to source file"))
         else:
             exception_builder(2)
-        
+
         #sync
         os.system("worker syncgop")
         print("gopath cmd \" gop " + args[0] + "\" now is ready")
@@ -52,11 +53,12 @@ def add_gop(sharg):
 
 def del_gop(sharg):
     if (sharg == "") :
-        exception_builder(0)       
-    
+        exception_builder(0)
+
     # args = sharg.split(',', -1)
     # if (len(args) != 2) :
     #     exception_builder(0)
+    print('func: del gopath shortcuts cmd "gop ' + sharg + '"')
     token = token_builder(sharg)
     if (get_token_line(gopathfile,  token) != -1) :
         #del line
@@ -65,7 +67,7 @@ def del_gop(sharg):
             print("... del usage to gopath script")
             del_line(gopathfile, del_usage)
             del_line(gopathfile, del_usage)
-            
+
             del_dir = get_token_line(gopathfile,  token)
             print("... del dir to gopath script")
             del_line(gopathfile, del_dir)
@@ -78,8 +80,8 @@ def del_gop(sharg):
             del_line(gopathfile, del_cmd)
             del_line(gopathfile, del_cmd)
         except UserWarning:
-            print(hint_builder("gopath file has been compromised", "re-install or add token to source file")) 
-        
+            print(hint_builder("gopath file has been compromised", "re-install or add token to source file"))
+
         #sync
         os.system("worker syncgop")
         print("gopath cmd \" gop " + sharg + "\" now is deleted")
@@ -107,10 +109,8 @@ def main(argv):
             args = arg
 
     if func == "agop":
-        print('func: add gopath shortcuts cmd "gop ' + args[0] + '" refer to gopath ' + args[2])
         add_gop(args)
     elif func == "dgop":
-        print('func: del gopath shortcuts cmd "gop ' + args[0] + '"')
         del_gop(args)
 
 if __name__ == "__main__":

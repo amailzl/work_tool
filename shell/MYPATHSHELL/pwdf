@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if [ ! -n "$1" ] ;then
+	pwd
+else
+	file=$1
+	root=$(pwd|  awk 'NR==1{print $1}')
+	# echo $(find -iname $file| awk '{for(i=1;i<=NF;i++){print $root$i;}}')
+	for (( i = 0,col =1 ; i < $(find -iname $file| wc -l); i++,col++ )); do
+		path=$(find -iname $file| awk -v col=$col 'NR==col{print $1}')
+		path=${path%%$file*}
+		path=${path#*./}
+		# find -iname $file| awk -v col=$col 'NR==col{print $1; print col}'
+		echo ${root}/${path}
+	done
+fi
+

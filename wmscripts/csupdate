@@ -1,0 +1,28 @@
+#!/bin/bash
+
+target=cluster_service
+
+if [[ $1 == "phoney" ]]||[[ $1 == "p" ]]; then
+	target=cluster_phoney_service
+fi
+
+echo "**************** step1 ****************"
+cd /home/amai/Work/WM-motor/project/ASE-3/gitdir/cluster/qnx700_16.1_5939_8148_5983 &&  ./qnxsdp-env.sh
+source qnxsdp-env.sh
+echo "build env set up finished"
+sleep 1
+
+echo "**************** step2 ****************"
+cd /home/amai/Work/WM-motor/project/ASE-3/gitdir/cluster/$target
+rm -rf ./build/bin/$target
+echo "old patch deleted"
+sleep 1
+
+echo "**************** step3 ****************"
+/home/amai/Work/WM-motor/project/ASE-3/gitdir/cluster/qt_source_code/prebuild/bin/qmake ${target}.pro -spec /home/amai/Work/WM-motor/project/ASE-3/gitdir/cluster/qt_source_code/qt-everywhere-src-5.12.6/qtbase/mkspecs/qnx-aarch64le-qcc CONFIG+=qtquickcompiler && make
+echo "new patch created"
+sleep 1
+
+echo "**************** step4 ****************"
+scpt /home/amai/Work/WM-motor/project/ASE-3/gitdir/cluster/$target/build/bin/$target /livingengine/bin
+echo "update new patch"

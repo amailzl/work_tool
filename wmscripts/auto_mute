@@ -1,0 +1,6 @@
+#!/bin/bash
+		
+for (( i = 1; i <= 30; i++ )); do
+	adb shell am broadcast -a com.living.subdisplayservice.demo.keyevent --ei keycode 12
+	sleep 1
+done

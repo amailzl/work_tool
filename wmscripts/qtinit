@@ -1,0 +1,59 @@
+#!/bin/bash
+
+#SET(QT_PRJ_PREBUILD ${PROJECT_SOURCE_DIR}/prebuild)
+#MESSAGE(STATUS "We Will Copy The Pre-build Files From ${QT_PRJ_PREBUILD}!!")
+############################################################################
+# How to pre-build the ${QT_PRJ_NAME}?                                     #
+############################################################################
+# (1).Prapare the QNX environment and the QT source code.
+echo "**************** step1 ****************"
+echo "Prapare the QNX environment and the QT source code."
+export QNX_ROOT=/home/amai/Work/WM-motor/project/ASE-3/gitdir/cluster/qnx700_16.1_5939_8148_5983
+export QNX_HOST=${QNX_ROOT}/host/linux/x86_64
+export QNX_TARGET=${QNX_ROOT}/target/qnx7
+export QT_SOURCE=/home/amai/Work/WM-motor/project/ASE-3/gitdir/cluster/qt_source_code
+export CC=${QNX_HOST}/usr/bin/qcc
+export CXX=${QNX_HOST}/usr/bin/q++
+export QT_BUILD_DIR=${QT_SOURCE}/build
+sleep 1
+#
+# (2).Initializes the QNX environment:
+echo "**************** step2 ****************"
+echo "Initializes the QNX environment"
+source ${QNX_ROOT}/qnxsdp-env.sh
+sleep 1
+#
+# (3).Create the building directory.
+echo "**************** step3 ****************"
+echo "enter the build dir"
+mkdir -pv ${QT_BUILD_DIR}
+cd ${QT_BUILD_DIR}
+sleep 1
+
+# (4).Configure the QT source code.
+#     ${QT_SOURCE}/qt-everywhere-src-5.12.6/configure -xplatform qnx-aarch64le-qcc [OPTIONS], e.g:
+#     (a)Configure the all modules:
+echo "**************** step4 ****************"
+echo "set config"
+${QT_SOURCE}/qt-everywhere-src-5.12.6/configure -prefix ${QT_BUILD_DIR}/prebuild -bindir-opensource -debug -static -xplatform qnx-aarch64le-qcc -c++std c++14 -pps -slog2 -no-dbus -L ${QNX_TARGET}/aarch64le/usr/lib -L ${QNX_TARGET}/aarch64le/lib -I ${QNX_TARGET}/usr/include
+sleep 1
+#     (b)Configure the required modules:
+#         ${QT_SOURCE}/qt-everywhere-src-5.12.6/configure -opensource -confirm-license -accessibility -prefix ${QT_BUILD_DIR}/prebuild -bindir ${QT_BUILD_DIR}/qmake_bins -xplatform qnx-aarch64le-qcc -release -shared -force-debug-info -separate-debug-info -no-strip -qpa qnx -pps -slog2 -c++std c++14 -gui -widgets -opengl es2 -eglfs -nomake examples -no-compile-examples -nomake tests -nomake tools -qt-zlib -qt-doubleconversion -qt-freetype -gif -qt-libjpeg -qt-libpng -qt-sqlite -qt-pcre -no-openssl -no-glib -no-dbus -no-libudev -no-system-proxies -no-iconv -no-icu -no-harfbuzz -no-pch -no-rpath -no-tslib -no-cups -skip qtactiveqt -skip qtandroidextras -skip qtcharts -skip qtconnectivity -skip qtdatavis3d -skip qtdoc -skip qtgamepad -skip qtlocation -skip qtmacextras -skip qtmultimedia -skip qtnetworkauth -skip qtpurchasing -skip qtquickcontrols -skip qtremoteobjects -skip qtscript -skip qtscxml -skip qtsensors -skip qtserialbus -skip qtserialport -skip qtspeech -skip qtsvg -skip qttranslations -skip qtwayland -skip qtwebchannel -skip qtwebengine -skip qtwebglplugin -skip qtwebsockets -skip qtwebview -skip qtwinextras -skip qtx11extras -skip qtxmlpatterns -L ${QNX_TARGET}/aarch64le/usr/lib -L ${QNX_TARGET}/aarch64le/lib -I ${QNX_TARGET}/usr/include
+#
+# (5).Build the QT source code and install the Qt bins.
+echo "**************** step 5 ****************"
+make
+make install
+echo "complied"
+sleep 1
+#
+# (6) You can review the QT bins in ${QT_SOURCE}/prebuild directory.
+#
+############################################################################
+#ADD_CUSTOM_TARGET(${QT_PRJ_NAME} ALL
+    #COMMENT "== Copying the QT bins from ${QT_PRJ_PREBUILD} to ${QT_PRJ_INSTALL_DIR} =="
+    #COMMAND cp -rf ${QT_PRJ_PREBUILD} ${QT_PRJ_INSTALL_DIR}
+#)
+# Also, You can replace the above ADD_CUSTOM_TARGET with the belows command:
+#   EXEC_PROGRAM(cp ARGS "-rf ${QT_PRJ_PREBUILD}/* ${QT_PRJ_INSTALL_DIR}/")
+

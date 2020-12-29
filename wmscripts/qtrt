@@ -1,0 +1,36 @@
+#!/bin/bash
+
+qt_root=/home/amai/Work/WM-motor/project/ASE-3/gitdir/cluster/qt_source_code
+
+expeco(){
+    export $1
+    echo $1
+}
+
+echo "**************** step 1 ****************"
+echo "File deployment on TARGET:"
+sudo test -d /livingengine/qt5||sudo mkdir /livingengine/qt5
+sudo cp -urv prebuild/{bin,lib,plugins,qml} /livingengine/qt5/
+sleep 1
+
+
+echo "**************** step 2 ****************"
+echo "Environments on TARGET:"
+expeco LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/livingengine/qt5/lib
+expeco QT_PLUGIN_PATH=/livingengine/qt5/plugins
+expeco QML2_IMPORT_PATH=/livingengine/qt5/qml
+expeco QT_QPA_FONTDIR=/livingengine/qt5/lib/fonts
+expeco QT_QPA_PLATFORM_PLUGIN_PATH=/livingengine/qt5/plugins/platforms
+expeco QT3D_MAX_THREAD_COUNT=4  #[1, core numbers]QT 3D线程数量
+expeco QT3D_ASPECT_THREAD_PRIORITY=3 # [0,7],{IdlePriority,LowestPriority,LowPriority,NormalPriority,HighPriority,HighestPriority,TimeCriticalPriority,InheritPriority}，默认为InheritPriority
+expeco QT3D_ASPECT_USE_VSYNC_SERIVCE=1 # [0,1]use vsync or tickclock
+expeco QT3D_ASPECT_CLOCK_TICK_FREQUENCY=30 # set FPS (0, 60], 0:default,does NOT set the sleep time.
+sleep 1
+
+echo "**************** step 3 ****************"
+echo "Sysroot deployment on HOST:"
+cd $qt_root
+sudo test -d /aarch64le/livingengine/qt5/||sudo mkdir /aarch64le/livingengine/qt5/
+sudo cp -urv prebuild/* /aarch64le/livingengine/qt5/
+./mk_qt5_runtime.sh
+sleep 1

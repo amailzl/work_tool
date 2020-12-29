@@ -1,0 +1,11 @@
+#!/bin/bash
+# if [ 1 -ne $# ]; then
+#     dev=$1
+if [ ! -n "$1" ] ;then
+	dev=000000007fa01390
+else
+    dev=$1
+fi
+
+adb -s $dev forward tcp:8002 tcp:22
+ssh -p 8002 root@127.0.0.1

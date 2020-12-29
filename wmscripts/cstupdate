@@ -1,0 +1,33 @@
+#!/bin/bash
+
+target=cluster_service
+executable=test
+
+if [[ $1 == "phoney" ]]||[[ $1 == "p" ]]; then
+# if [ $1 == "phoney" || ]; then
+	target=cluster_phoney_service
+	executable=test_phoney
+fi
+
+echo "**************** step1 ****************"
+cd /home/amai/Work/WM-motor/project/ASE-3/gitdir/cluster/qnx700_16.1_5939_8148_5983 &&  ./qnxsdp-env.sh
+source qnxsdp-env.sh
+echo "build env set up finished"
+sleep 1
+
+
+echo "**************** step2 ****************"
+cd /home/amai/Work/WM-motor/project/ASE-3/gitdir/cluster/$target
+rm -rf ~/Work/worktable/canreplayer/$executable
+echo "old patch deleted"
+sleep 1
+
+echo "**************** step3 ****************"
+/home/amai/Work/WM-motor/project/ASE-3/gitdir/cluster/qnx700_16.1_5939_8148_5983/host/linux/x86_64/usr/bin/aarch64-unknown-nto-qnx7.0.0-gcc -o ~/Work/worktable/canreplayer/$executable utils/canframereplayer/canframereplayer.c utils/canframereplayer/main.c include/comm_typedef.h
+
+echo "new patch created"
+sleep 1
+
+echo "**************** step4 ****************"
+scpt ~/Work/worktable/canreplayer/$executable /root/test
+echo "update new patch"

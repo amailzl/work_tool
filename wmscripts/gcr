@@ -1,0 +1,32 @@
+cd ~/Work/worktable/canreplayer
+
+target=cluster_phoney_service
+executable=test
+
+if [[ $1 == "cluster_3d" ]]||[[ $1 == "3d" ]]; then
+# if [ $1 == "phoney" || ]; then
+	target=cluster_3d
+elif [[ $1 == "cluster_service" ]]||[[ $1 == "cs" ]]; then
+	target=cluster_service
+fi
+
+echo "**************** step1 ****************"
+echo "rm old executable && core"
+rm -vf $target ${target}.core
+sleep 1
+
+echo "**************** step2 ****************"
+echo "get new executable && core"
+scpf /livingengine/bin/$target .
+scpf /var/log/${target}.core .
+sleep 1
+
+
+echo "**************** step3 ****************"
+echo "bring up wmgdb"
+sleep 1
+wmgdb $target -c ${target}.core
+
+#echo "**************** step4 ****************"
+#cluster_service set solib-search-path /home/amai/Work/worktable/canreplayer/install/aarch64le/yf/usr/lib64:/home/amai/Work/worktable/canreplayer/install/aarch64le/lib:/home/amai/Work/worktable/canreplayer/install/livingengine/lib/:/home/amai/Work/WM-motor/project/ASE-3/gitdir/cluster/qnx700_16.1_5939_8148_5983/target/qnx7/aarch64le/lib/:/home/amai/Work/WM-motor/project/ASE-3/gitdir/cluster/qnx700_16.1_5939_8148_5983/target/qnx7/aarch64le/lib/:/home/amai/Work/WM-motor/project/ASE-3/gitdir/cluster/qnx700_16.1_5939_8148_5983/target/qnx7/aarch64le/usr/lib/
+#cluster_3d set solib-search-path /home/amai/Work/WM-motor/project/ASE-3/gitdir/cluster/qnx700_16.1_5939_8148_5983/target/qnx7/aarch64le/lib/:/home/amai/Work/WM-motor/project/ASE-3/gitdir/cluster/qt_source_code/prebuild/lib/:/home/amai/Work/WM-motor/project/ASE-3/gitdir/cluster/qnx700_16.1_5939_8148_5983/target/qnx7/aarch64le/usr/lib/:/home/amai/Work/worktable/canreplayer/install/aarch64le/usr/lib/graphics/qc/:/home/amai/Work/worktable/canreplayer/install/livingengine/qt/qt_runtime/plugins/platforms/:/home/amai/Work/worktable/canreplayer/install/livingengine/qtapps/wm_3d_plugin/resource/WmCar3D/:/home/amai/Work/WM-motor/project/ASE-3/gitdir/cluster/qnx700_16.1_5939_8148_5983/custom/30bits_format/screen/target/qnx7/aarch64le/usr/lib/:

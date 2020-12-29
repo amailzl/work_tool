@@ -9,7 +9,7 @@ function_print_usage(){
 	echo "init: init PATH              "
 	echo "sshl: login to wm server      "
 	echo "fsys: replace system.img      "
-	echo "rs: replace systemui                           "
+	echo "rs: replace systemui          "
 	echo "	-systemUI                "
 	echo "push [srcdir] [dstdir]         "
 	echo "dumpmem [pid]     "
@@ -21,13 +21,13 @@ function_print_usage(){
 
 function_sync(){
 	echo "set PATH to ${local_bin}/"
-	sudo cp -rv ${worker_dir}/* ${python_entry}/MYPATHPY/* ${python_entry}/APPS/* ${local_bin}
+	sudo cp -urv ${worker_dir}/* ${python_entry}/MYPATHPY/* ${python_entry}/APPS/* ${local_bin}
 }
 
 #hide
 function_sync_gop(){
 	echo "sync gopath script to ${local_bin}/"
-	sudo cp -v ${worker_dir}/gopath ${local_bin}
+	sudo cp -vu ${worker_dir}/gopath ${local_bin}
 }
 
 function_init(){

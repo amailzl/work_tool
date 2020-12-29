@@ -39,6 +39,16 @@ function_print_usage(){
 	echo "d: ${d_dir}"
  	#token_ai
 	echo "ai: ${ai_dir}"
+ 	#token_cs
+	echo "cs: ${cs_dir}"
+ 	#token_wt
+	echo "wt: ${wt_dir}"
+ 	#token_ci
+	echo "ci: ${ci_dir}"
+ 	#token_qnx
+	echo "qnx: ${qnx_dir}"
+ 	#token_qt
+	echo "qt: ${qt_dir}"
 	#token_insert_usage
 	echo "*****************************************************************"
 
@@ -75,6 +85,16 @@ asp_dir=/home/amai/AndroidStudioProjects
 d_dir=/home/amai/Work/DataBase/
 #token_ai
 ai_dir=/home/amai/Work/MY-github/AI
+#token_cs
+cs_dir=/home/amai/Work/WM-motor/project/ASE-3/gitdir/cluster/cluster_service
+#token_wt
+wt_dir=/home/amai/Work/worktable
+#token_ci
+ci_dir=/home/amai/Work/WM-motor/project/ASE-3/gitdir/cluster/cluster_ui
+#token_qnx
+qnx_dir=/home/amai/Work/WM-motor/project/ASE-3/gitdir/cluster/qnx700_16.1_5939_8148_5983
+#token_qt
+qt_dir=/home/amai/Work/WM-motor/project/ASE-3/gitdir/cluster/qt_source_code
 #token_insert_dir
  
 
@@ -134,6 +154,26 @@ elif [ $1 == "d" ]; then
 elif [ $1 == "ai" ]; then
 	echo "gopath /home/amai/Work/MY-github/AI"
 	cd ${ai_dir}
+#token_cs
+elif [ $1 == "cs" ]; then
+	echo "gopath /home/amai/Work/WM-motor/project/ASE-3/gitdir/cluster/cluster_service"
+	cd ${cs_dir}
+#token_wt
+elif [ $1 == "wt" ]; then
+	echo "gopath /home/amai/Work/worktable"
+	cd ${wt_dir}
+#token_ci
+elif [ $1 == "ci" ]; then
+	echo "gopath /home/amai/Work/WM-motor/project/ASE-3/gitdir/cluster/cluster_ui"
+	cd ${ci_dir}
+#token_qnx
+elif [ $1 == "qnx" ]; then
+	echo "gopath /home/amai/Work/WM-motor/project/ASE-3/gitdir/cluster/qnx700_16.1_5939_8148_5983"
+	cd ${qnx_dir}
+#token_qt
+elif [ $1 == "qt" ]; then
+	echo "gopath /home/amai/Work/WM-motor/project/ASE-3/gitdir/cluster/qt_source_code"
+	cd ${qt_dir}
 #token_insert_cmd
 fi
 
