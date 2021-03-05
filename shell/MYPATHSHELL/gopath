@@ -11,44 +11,26 @@ function_print_usage(){
 	#token_W
 	echo "alias :  run \"gop [alias]\" to skip to dir                      "
 	echo "W: ${workroot} "
-	#token_A3
-	echo "A3: ${ase3_dir}      "
-	#token_A
-	echo "A: ${apliroot}      "
 	#token_b
 	echo "b: ${shpathroot}      "
 	#token_w
 	echo "w: ${worker_dir}      "
-	#token_as
-	echo "as: ${asstartdir}      "
 	#token_sh
 	echo "sh: ${shell_dir}     "
 	#token_py
 	echo "py: ${python_dir}      "
-	#token_fl
-	echo "fl: ${flash_dir}       "
- 	#token_aosp
-	echo "aosp: ${aosp_dir}  "
- 	#token_a2
-	echo "a2: ${a2_dir}"
  	#token_mg
 	echo "mg: ${mg_dir}"
- 	#token_asp
-	echo "asp: ${asp_dir}"
- 	#token_d
-	echo "d: ${d_dir}"
  	#token_ai
 	echo "ai: ${ai_dir}"
- 	#token_cs
-	echo "cs: ${cs_dir}"
  	#token_wt
 	echo "wt: ${wt_dir}"
- 	#token_ci
-	echo "ci: ${ci_dir}"
- 	#token_qnx
-	echo "qnx: ${qnx_dir}"
- 	#token_qt
-	echo "qt: ${qt_dir}"
+ 	#token_hb
+	echo "hb: ${hb_dir}"
+ 	#token_db
+	echo "db: ${db_dir}"
+ 	#token_vcs
+	echo "vcs: ${vcs_dir}"
 	#token_insert_usage
 	echo "*****************************************************************"
 
@@ -75,26 +57,18 @@ shell_dir=${workroot}/MY-github/work_tool/shell
 python_dir=${workroot}/MY-github/work_tool/python
 flash_dir=${ase3_dir}/releasedir/fastboot
 aosp_dir=/home/amai/Work/AOSP
-#token_a2
-a2_dir=/home/amai/Work/WM-motor/project/ASE-2/gitdir
 #token_mg
 mg_dir=/home/amai/Work/MY-github/
-#token_asp
-asp_dir=/home/amai/AndroidStudioProjects
-#token_d
-d_dir=/home/amai/Work/DataBase/
 #token_ai
 ai_dir=/home/amai/Work/MY-github/AI
-#token_cs
-cs_dir=/home/amai/Work/WM-motor/project/ASE-3/gitdir/cluster/cluster_service
 #token_wt
 wt_dir=/home/amai/Work/worktable
-#token_ci
-ci_dir=/home/amai/Work/WM-motor/project/ASE-3/gitdir/cluster/cluster_ui
-#token_qnx
-qnx_dir=/home/amai/Work/WM-motor/project/ASE-3/gitdir/cluster/qnx700_16.1_5939_8148_5983
-#token_qt
-qt_dir=/home/amai/Work/WM-motor/project/ASE-3/gitdir/cluster/qt_source_code
+#token_hb
+hb_dir=/home/amai/Work/MY-github/handbooks
+#token_db
+db_dir=/home/amai/Work/DataBase/
+#token_vcs
+vcs_dir=/home/amai/Work/PATAC/REPO/vcs
 #token_insert_dir
  
 
@@ -134,10 +108,6 @@ elif [ $1 == "fl" ]; then
 elif [ $1 == "aosp" ]; then
 	echo "gopath /home/amai/Work/AOSP"
 	cd ${aosp_dir}
-#token_a2
-elif [ $1 == "a2" ]; then
-	echo "gopath /home/amai/Work/WM-motor/project/ASE-2/gitdir"
-	cd ${a2_dir}
 #token_mg
 elif [ $1 == "mg" ]; then
 	echo "gopath /home/amai/Work/MY-github/"
@@ -146,34 +116,28 @@ elif [ $1 == "mg" ]; then
 elif [ $1 == "asp" ]; then
 	echo "gopath /home/amai/AndroidStudioProjects"
 	cd ${asp_dir}
-#token_d
-elif [ $1 == "d" ]; then
 	echo "gopath /home/amai/Work/DataBase/"
 	cd ${d_dir}
 #token_ai
 elif [ $1 == "ai" ]; then
 	echo "gopath /home/amai/Work/MY-github/AI"
 	cd ${ai_dir}
-#token_cs
-elif [ $1 == "cs" ]; then
-	echo "gopath /home/amai/Work/WM-motor/project/ASE-3/gitdir/cluster/cluster_service"
-	cd ${cs_dir}
 #token_wt
 elif [ $1 == "wt" ]; then
 	echo "gopath /home/amai/Work/worktable"
 	cd ${wt_dir}
-#token_ci
-elif [ $1 == "ci" ]; then
-	echo "gopath /home/amai/Work/WM-motor/project/ASE-3/gitdir/cluster/cluster_ui"
-	cd ${ci_dir}
-#token_qnx
-elif [ $1 == "qnx" ]; then
-	echo "gopath /home/amai/Work/WM-motor/project/ASE-3/gitdir/cluster/qnx700_16.1_5939_8148_5983"
-	cd ${qnx_dir}
-#token_qt
-elif [ $1 == "qt" ]; then
-	echo "gopath /home/amai/Work/WM-motor/project/ASE-3/gitdir/cluster/qt_source_code"
-	cd ${qt_dir}
+#token_hb
+elif [ $1 == "hb" ]; then
+	echo "gopath /home/amai/Work/MY-github/handbooks"
+	cd ${hb_dir}
+#token_db
+elif [ $1 == "db" ]; then
+	echo "gopath /home/amai/Work/DataBase/"
+	cd ${db_dir}
+#token_vcs
+elif [ $1 == "vcs" ]; then
+	echo "gopath /home/amai/Work/PATAC/REPO/vcs"
+	cd ${vcs_dir}
 #token_insert_cmd
 fi
 

@@ -8,6 +8,12 @@ import hashlib
 import time
 import sqlite3
 
+# DB init
+# 	sqlite3 worktables
+# 	CREATE TABLE PENDINGWORKS(WORK TEXT, STATUS TEXT, GUIDELINE TEXT, COMMENT TEXT,WID INT  PRIMARY KEY);
+# 	CREATE TABLE DONE(WORK TEXT, STATUS TEXT, GUIDELINE TEXT, COMMENT TEXT,WID INT  PRIMARY KEY);
+#
+
 sq_select_cmd=[
     'show_pending_work',
     'edit_pending_work',
