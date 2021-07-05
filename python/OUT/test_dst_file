@@ -1,0 +1,92 @@
+mycustomname
+mycustomid
+mycustomnamespace
+mycustomtype
+Custom
+int zone
+,
+mydefaultzone
+
+public class mycustomname extends PropertyBase{
+
+    public mycustomname(CarPropertyWrapper carPropertyWrapper){
+        super(carPropertyWrapper);
+        TAG = "mycustomid";
+        mCustomOnChangeEventHandler = false;
+        mOnChangeEventListenerID = mycustomnamespace.mycustomid;
+        initPropertyBase(mycustomnamespace.mycustomid);
+    }
+
+
+    public void setCustom(int zone,mycustomtype value) {
+        setPropertyValue(mycustomnamespace.mycustomid,
+                mydefaultzone,
+                value);
+    }
+
+    public mycustomtype getCustom(int zone) {
+        CarPropertyValue carPropertyValue = getPropertyValue(mycustomnamespace.mycustomid, mydefaultzone);
+
+        if (!checkIfCarPropertyValueValid(carPropertyValue)) {
+            Log.e(TAG, "Failed to get mycustomid in getCustom for mydefaultzone" + mydefaultzone);
+            return false;
+        }
+
+        return ((mycustomtype) carPropertyValue.getValue());
+    }
+
+    public void registerAppDataListener(int zone,VehicleDataListener listener) {
+        registerAppListener(mOnChangeEventListenerID, mydefaultzone, listener);
+    }
+
+    public void unregisterAppDataListener(int zone) {
+        unregisterAppListener(mOnChangeEventListenerID,  mydefaultzone);
+    }
+
+}
+mycustomname
+mycustomid
+mycustomnamespace
+mycustomtype
+Custom
+int zone
+, 
+mydefaultzone
+
+public class mycustomname extends PropertyBase{
+
+    public mycustomname(CarPropertyWrapper carPropertyWrapper){
+        super(carPropertyWrapper);
+        TAG = "mycustomid";
+        mCustomOnChangeEventHandler = false;
+        mOnChangeEventListenerID = mycustomnamespace.mycustomid;
+        initPropertyBase(mycustomnamespace.mycustomid);
+    }
+
+
+    public void setCustom(int zone, mycustomtype value) {
+        setPropertyValue(mycustomnamespace.mycustomid,
+                mydefaultzone,
+                value);
+    }
+
+    public mycustomtype getCustom(int zone) {
+        CarPropertyValue carPropertyValue = getPropertyValue(mycustomnamespace.mycustomid, mydefaultzone);
+
+        if (!checkIfCarPropertyValueValid(carPropertyValue)) {
+            Log.e(TAG, "Failed to get mycustomid in getCustom for mydefaultzone" + mydefaultzone);
+            return false;
+        }
+
+        return ((mycustomtype) carPropertyValue.getValue());
+    }
+
+    public void registerAppDataListener(int zone, VehicleDataListener listener) {
+        registerAppListener(mOnChangeEventListenerID, mydefaultzone, listener);
+    }
+
+    public void unregisterAppDataListener(int zone) {
+        unregisterAppListener(mOnChangeEventListenerID,  mydefaultzone);
+    }
+
+}

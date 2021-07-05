@@ -4,12 +4,12 @@ import re
 from amaifilelib.exceptionbuilder import exception_builder
 from amaifilelib.utils import py_out_dir
 
-# 
+#
 # @param filepath
 # @return fd
-# 
+#
 # try to create file in a+ mode
-# 
+#
 def get_file(file) :
     try :
         f = open (file, 'a+')
@@ -18,11 +18,11 @@ def get_file(file) :
         print('[IOError] get_file failed: ' + file)
         exit(2)
 
-# 
+#
 # @param fd
-# 
+#
 # try to close an opened file
-# 
+#
 def close_file(f) :
     try :
         f.close()
@@ -31,12 +31,12 @@ def close_file(f) :
         print('[IOError] file '+ file +'close failed')
         exit(2)
 
-# 
+#
 # @param filepath
 # @return fd
-# 
+#
 # try to create file in w+ mode
-# 
+#
 def get_clear_file(file) :
     try :
         f = open (file, 'w+')
@@ -45,14 +45,14 @@ def get_clear_file(file) :
         print('[IOError] get_clear_file failed: ' + file)
         exit(2)
 
-# 
+#
 # @param filepath
 # @param linenumber
 # @param content
 # @return ret
-# 
+#
 # try to add a line at specified linenumber
-# 
+#
 def add_line(file, line, content) :
     if (line < 0) :
         exception_builder(3)
@@ -72,13 +72,13 @@ def add_line(file, line, content) :
     return True
     close_file(fd)
 
-# 
+#
 # @param filepath
 # @param linenumber
 # @return ret
-# 
+#
 # try to del a line at specified linenumber
-# 
+#
 def del_line(file, line) :
     if (line < 0) :
         exception_builder(3)
@@ -97,16 +97,16 @@ def del_line(file, line) :
         fd.write(content)
 
     return True
-    close_file(fd)  
+    close_file(fd)
 
-# 
+#
 # @param filepath
 # @param linenumber
 # @param linenumber
 # @return content
-# 
+#
 # get content bewteen specified lines
-# 
+#
 def get_line(file, startline, endline = 0) :
     fd = get_file(file)
     content = ""
@@ -122,17 +122,17 @@ def get_line(file, startline, endline = 0) :
             content = content + line
             if (c >= endline):
                 break
-    
+
     # print (content)
     return content
 
-# 
+#
 # @param filepath
 # @param keyword
 # @return content
-# 
+#
 # get content containing the keyword
-# 
+#
 def get_line_with_keyword(file, keyword) :
     fd = get_file(file)
     index = 0
@@ -143,11 +143,11 @@ def get_line_with_keyword(file, keyword) :
                 add_line(py_out_dir + "/" + file, index, line)
     close_file(fd)
 
-# 
+#
 # @param fd
-# 
+#
 # get line number
-# 
+#
 def get_line_number(fd) :
     count = 0
     fd.seek(0, 0)
@@ -156,12 +156,12 @@ def get_line_number(fd) :
     fd.seek(0, 0)
     return count
 
-# 
+#
 # @param fd
 # @param token
-# 
+#
 # get token offset
-# 
+#
 def get_token_line(file, token) :
     # print("finding token : " + token + " in " + file)
     fd = get_file(file)
@@ -181,10 +181,41 @@ def get_token_line(file, token) :
     else :
         return count
 
-# 
+#
+# @param fd
 # @param token
-# 
+#
+# get token offset
+#
+def replace_token(srcfile, dstfile, tokenmap, rewrite = False) :
+    # print("finding token : " + token + " in " + file)
+    srcfd = get_file(srcfile)
+    dstfd = get_file(dstfile)
+
+    if(rewrite == True) :
+        get_clear_file(dstfile)
+
+    result = 0
+    srcfd.seek(0, 0)
+    dstfd.seek(0, 0)
+    for line in srcfd.readlines():
+        # if token in line :
+        for key in tokenmap.keys() :
+            if key in line :
+                line = line.replace(key, tokenmap[key])
+                result = result + 1
+        dstfd.write(line)
+
+    srcfd.seek(0, 0)
+    dstfd.seek(0, 0)
+    close_file(srcfd)
+    close_file(dstfd)
+    return result
+
+#
+# @param token
+#
 # get file token
-# 
+#
 def token_builder(token) :
     return ("#token_"+ token)

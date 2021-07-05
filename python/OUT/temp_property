@@ -1,0 +1,46 @@
+#class_name
+#property_ID
+#property_namespace
+#value_type
+#OpeName
+#custom_zone
+#cz_extra
+#default_zone
+
+public class #class_name extends PropertyBase{
+
+    public #class_name(CarPropertyWrapper carPropertyWrapper){
+        super(carPropertyWrapper);
+        TAG = "#property_ID";
+        mCustomOnChangeEventHandler = false;
+        mOnChangeEventListenerID = #property_namespace.#property_ID;
+        initPropertyBase(#property_namespace.#property_ID);
+    }
+
+
+    public void set#OpeName(#custom_zone#cz_extra#value_type value) {
+        setPropertyValue(#property_namespace.#property_ID,
+                #default_zone,
+                value);
+    }
+
+    public #value_type get#OpeName(#custom_zone) {
+        CarPropertyValue carPropertyValue = getPropertyValue(#property_namespace.#property_ID, #default_zone);
+
+        if (!checkIfCarPropertyValueValid(carPropertyValue)) {
+            Log.e(TAG, "Failed to get #property_ID in get#OpeName for #default_zone" + #default_zone);
+            return false;
+        }
+
+        return ((#value_type) carPropertyValue.getValue());
+    }
+
+    public void registerAppDataListener(#custom_zone#cz_extraVehicleDataListener listener) {
+        registerAppListener(mOnChangeEventListenerID, #default_zone, listener);
+    }
+
+    public void unregisterAppDataListener(#custom_zone) {
+        unregisterAppListener(mOnChangeEventListenerID,  #default_zone);
+    }
+
+}

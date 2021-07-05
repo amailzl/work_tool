@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Controller> 
+    <property class="WindowController" method="SunroofPosAndMotionListener" namespace="PatacProperty" name="SUNROOF_POSITION_STATUS" halmapping="listener" />
+    <property class="WindowController" method="SunroofPercentPosListener" namespace="PatacProperty" name="SUNROOF_PERCENTAGE_POSITION_STATUS" halmapping="listener" />
+    <!-- class="WindowController" method="SunshadePositionListener" namespace="PatacProperty"  -->
+    <property class="WindowController" method="FrontSunshadePositionAndMotionListener" namespace="PatacProperty" name="FRONT_SUNSHADE_POSITION_STATUS" halmapping="listener" />
+    <property class="WindowController" method="RearSunshadePositionAndMotionListener" namespace="PatacProperty" name="REAR_SUNSHADE_POSITION_STATUS" halmapping="listener" />
+    <!-- class="WindowController" method="SunshadePercentPosListener" namespace="PatacProperty"  -->
+    <property class="WindowController" method="FrontSunshadePercentPosListener" namespace="PatacProperty" name="FRONT_SUNSHADE_PERCENTAGE_POSITION_STATUS" halmapping="listener" />
+    <property class="WindowController" method="RearSunshadePercentPosListener" namespace="PatacProperty" name="REAR_SUNSHADE_PERCENTAGE_POSITION_STATUS" halmapping="listener" />
+    <!-- class="WindowController" method="VehicleWindowPositionListener" namespace="PatacProperty"  -->
+    <property class="WindowController" method="DriverWindowPositionListener" namespace="PatacProperty" name="DRIVER_WINDOW_POSITION_STATUS" halmapping="listener" />
+    <property class="WindowController" method="PassengerWindowPositionListener" namespace="PatacProperty" name="PASSENGER_WINDOW_POSITION_STATUS" halmapping="listener" />
+    <property class="WindowController" method="RearLeftWindowPositionListener" namespace="PatacProperty" name="LEFT_REAR_WINDOW_POSITION_STATUS" halmapping="listener" />
+    <property class="WindowController" method="RearRightWindowPositionListener" namespace="PatacProperty" name="RIGHT_REAR_WINDOW_POSITION_STATUS" halmapping="listener" />
+    <!-- class="WindowController" method="VehicleWindowPercentPosListener" namespace="PatacProperty"  -->
+    <property class="WindowController" method="DriverWindowPercentPosListener" namespace="PatacProperty" name="DRIVER_WINDOW_PERCENTAGE_POSITION_STATUS" halmapping="listener" />
+    <property class="WindowController" method="PassengerWindowPercentPosListener" namespace="PatacProperty" name="PASSENGER_WINDOW_PERCENTAGE_POSITION_STATUS" halmapping="listener" />
+    <property class="WindowController" method="RearLeftWindowPercentPosListener" namespace="PatacProperty" name="REAR_LEFT_WINDOW_PERCENTAGE_POSITION_STATUS" halmapping="listener" />
+    <property class="WindowController" method="RearRightWindowPercentPosListener" namespace="PatacProperty" name="REAR_RIGHT_WINDOW_PERCENTAGE_POSITION_STATUS" halmapping="listener" />
+    <!-- class="WindowController" method="VehicleWindowMotionListener" namespace="PatacProperty"  -->
+    <property class="WindowController" method="DriverWindowMotionListener" namespace="PatacProperty" name="DRIVER_WINDOW_MOTION_STATUS" halmapping="listener" />
+    <property class="WindowController" method="PassengerWindowMotionListener" namespace="PatacProperty" name="PASSENGER_WINDOW_MOTION_STATUS" halmapping="listener" />
+    <property class="WindowController" method="RearLeftWindowMotionListener" namespace="PatacProperty" name="REAR_LEFT_WINDOW_MOTION_STATUS" halmapping="listener" />
+    <property class="WindowController" method="RearRightWindowMotionListener" namespace="PatacProperty" name="REAR_RIGHT_WINDOW_MOTION_STATUS" halmapping="listener" />
+    <!-- class="WindowController" method="VehicleWindowInitialStatusListener" namespace="PatacProperty"  -->
+    <property class="WindowController" method="DriverWindowInitializedListener" namespace="PatacProperty" name="DRIVER_WINDOW_NOT_NORMALIZED_INDICATION_ON" halmapping="listener" />
+    <property class="WindowController" method="PassengerWindowInitializedListener" namespace="PatacProperty" name="PASSENGER_WINDOW_NOT_NORMALIZED_INDICATION_ON" halmapping="listener" />
+    <property class="WindowController" method="RearLeftWindowInitializedListener" namespace="PatacProperty" name="REAR_LEFT_WINDOW_NOT_NORMALIZED_INDICATION_ON" halmapping="listener" />
+    <property class="WindowController" method="RearRightWindowInitializedListener" namespace="PatacProperty" name="REAR_RIGHT_WINDOW_NOT_NORMALIZED_INDICATION_ON" halmapping="listener" />
+    <property class="WindowController" method="VehicleWindowLockoutListener" namespace="PatacProperty" name="VIRTUAL_CONTROL_POWER_WINDOW_LOCKOUT_STATUS_CURRENT_SELECTION_VALUE" halmapping="listener" />
+    <!-- class="WindowController" method="SideSunblindPositionStatusListener" namespace="PatacProperty"  -->
+    <property class="WindowController" method="RearLeftSideSunblindPositionListener" namespace="PatacProperty" name="REAR_LEFT_SIDE_SUNBLIND_POSITION_STATUS" halmapping="listener" />
+    <property class="WindowController" method="RearRightSideSunblindPositionListener" namespace="PatacProperty" name="REAR_RIGHT_SIDE_SUNBLIND_POSITION_STATUS" halmapping="listener" />
+    <!-- class="WindowController" method="SideSunblindInitialStatusListener" namespace="PatacProperty"  -->
+    <property class="WindowController" method="RearLeftSideSunblindInitializedListener" namespace="PatacProperty" name="REAR_LEFT_SIDE_SUNBLIND_NORMALIZATION_REQUIRED_INDICATION_ON" halmapping="listener" />
+    <property class="WindowController" method="RearRightSideSunblindInitializedListener" namespace="PatacProperty" name="REAR_RIGHT_SIDE_SUNBLIND_NORMALIZATION_REQUIRED_INDICATION_ON" halmapping="listener" />
+    <property class="WindowController" method="RemoteWindowOperationListener" namespace="VendorProperty" name="REMOTE_WINDOW_OPERATION_CUSTOMIZATION" halmapping="listener" />
+    <property class="WindowController" method="AutoCloseMovableWindowRemoteListener" namespace="PatacProperty" name="AUTO_CLOSE_MOVABLE_WINDOW_REMOTE_CUSTOMIZATION" halmapping="listener" />
+    <property class="WindowController" method="AutoCloseMovableDrivingListener" namespace="PatacProperty" name="AUTO_CLOSE_MOVABLE_WINDOW_DRIVING_CUSTOMIZATION" halmapping="listener" />
+    <!-- class="WindowController" method="SunroofPercentPositionValidityStatusListener" namespace="PatacProperty" 
+    class="WindowController" method="FrontSunshadePercentPositionValidityStatusListener" namespace="PatacProperty" 
+    class="WindowController" method="RearSunshadePercentPositionValidityStatusListener" namespace="PatacProperty" 
+    class="WindowController" method="DriverWindowPercentPositionValidityStatusListener" namespace="PatacProperty" 
+    class="WindowController" method="PassengerWindowPercentPositionValidityStatusListener" namespace="PatacProperty" 
+    class="WindowController" method="RearLeftWindowPercentPositionValidityStatusListener" namespace="PatacProperty" 
+    class="WindowController" method="RearRightWindowPercentPositionValidityStatusListener" namespace="PatacProperty"  -->
+    <property class="VehicleStatusController" method="PassengerOccupancyStatusListener" namespace="PatacProperty" name="FRONT_PASSENGER_RESTRAINT_OCCUPANCY_STATUS" halmapping="listener" />
+    <property class="VehicleStatusController" method="DriverSeatBeltIndicationListener" namespace="VendorProperty" name="DRIVER_SEAT_BELT_STATUS" halmapping="listener" />
+    <property class="VehicleStatusController" method="AutoRearWipeListener" namespace="VendorProperty" name="AUTO_REAR_WIPE_CUSTOMIZATION" halmapping="listener" />
+    <property class="VehicleStatusController" method="RainSenseListener" namespace="VendorProperty" name="RAIN_SENSE_CUSTOMIZATION" halmapping="listener" />
+    <property class="VehicleStatusController" method="AutomaticDriveLockingListener" namespace="VendorProperty" name="AUTOMATIC_DRIVE_LOCKING_CUSTOMIZATION" halmapping="listener" />
+    <property class="VehicleStatusController" method="AutomaticUnlockingListener" namespace="VendorProperty" name="AUTOMATIC_UNLOCKING_CUSTOMIZATION" halmapping="listener" />
+    <property class="VehicleStatusController" method="LastDoorClosedLockingListener" namespace="VendorProperty" name="LAST_DOOR_CLOSED_LOCKING_CUSTOMIZATION" halmapping="listener" />
+    <property class="VehicleStatusController" method="OpenDoorAntiLockOutListener" namespace="VendorProperty" name="OPEN_DOOR_ANTI_LOCK_OUT_CUSTOMIZATION" halmapping="listener" />
+    <property class="VehicleStatusController" method="WalkAwayLockingListener" namespace="VendorProperty" name="WALK_AWAY_LOCKING_CUSTOMIZATION" halmapping="listener" />
+    <property class="VehicleStatusController" method="PassiveUnlockingListener" namespace="VendorProperty" name="PASSIVE_UNLOCKING_CUSTOMIZATION" halmapping="listener" />
+    <property class="VehicleStatusController" method="RelockRemoteUnlockedDoorListener" namespace="VendorProperty" name="RELOCK_REMOTE_UNLOCKED_DOOR_CUSTOMIZATION" halmapping="listener" />
+    <property class="VehicleStatusController" method="RemoteInVehicleReminderListener" namespace="VendorProperty" name="REMOTE_IN_VEHICLE_REMINDER_CUSTOMIZATION" halmapping="listener" />
+    <property class="VehicleStatusController" method="RemoteLockingFeedbackListener" namespace="VendorProperty" name="REMOTE_LOCKING_FEEDBACK_CUSTOMIZATION" halmapping="listener" />
+    <property class="VehicleStatusController" method="SelectiveUnlockingListener" namespace="VendorProperty" name="SELECTIVE_UNLOCKING_CUSTOMIZATION" halmapping="listener" />
+    <property class="VehicleStatusController" method="RemoteLeftVehicleReminderListener" namespace="VendorProperty" name="REMOTE_LEFT_VEHICLE_REMINDER_CUSTOMIZATION" halmapping="listener" />
+    <property class="VehicleStatusController" method="RemoteUnlockLightingFeedbackListener" namespace="VendorProperty" name="REMOTE_UNLOCK_LIGHTING_FEEDBACK_CUSTOMIZATION" halmapping="listener" />
+    <property class="VehicleStatusController" method="ReverseTiltMirrorListener" namespace="VendorProperty" name="REVERSE_TILT_MIRROR_CUSTOMIZATION" halmapping="listener" />
+    <property class="VehicleStatusController" method="RearSeatReminderStatusListener" namespace="VendorProperty" name="REAR_SEAT_REMINDER_ENABLE_DISABLE_CUSTOMIZATION" halmapping="listener" />
+    <property class="VehicleStatusController" method="AutoMirrorFoldListener" namespace="VendorProperty" name="AUTO_MIRROR_FOLD_CUSTOMIZATION" halmapping="listener" />
+    <property class="VehicleStatusController" method="EasyExitListener" namespace="VendorProperty" name="EASY_EXIT_CUSTOMIZATION" halmapping="listener" />
+    <property class="VehicleStatusController" method="RemoteStartHeatSteeringWheelListener" namespace="PatacProperty" name="REMOTE_START_HEAT_STEERING_WHEEL_CUSTOMIZATION" halmapping="listener" />
+    <property class="VehicleStatusController" method="PowerRearClosureListener" namespace="VendorProperty" name="POWER_REAR_CLOSURE_CUSTOMIZATION" halmapping="listener" />
+    <property class="VehicleStatusController" method="HeatedSteeringWheelConfigurationListener" namespace="PatacProperty" name="HEATED_STEERING_WHEEL_CONFIGURATION" halmapping="listener" />
+    <property class="VehicleStatusController" method="HeatedSteeringWheelLevelsAvailableListener" namespace="PatacProperty" name="HEATED_STEERING_WHEEL_LEVELS_AVAILABLE" halmapping="listener" />
+    <property class="VehicleStatusController" method="HeatedSteeringWheelIndicationListener" namespace="PatacProperty" name="HEATED_STEERING_WHEEL_INDICATION" halmapping="listener" />
+    <property class="VehicleStatusController" method="HMIWiperControlAvailableListener" namespace="PatacProperty" name="HMI_WIPER_CONTROL_AVAILABLE" halmapping="listener" />
+    <property class="VehicleStatusController" method="WiperServiceUpParkingStatusListener" namespace="PatacProperty" name="WIPER_SERVICE_UP_PARKING_STATUS" halmapping="listener" />
+    <property class="VehicleStatusController" method="WiperMistControlAvailableListener" namespace="PatacProperty" name="WIPER_MIST_CONTROL_AVAILABLE" halmapping="listener" />
+    <property class="VehicleStatusController" method="WiperStatusListener" namespace="PatacProperty" name="WIPER_STATUS" halmapping="listener" />
+    <property class="VehicleStatusController" method="DoorPositionListener" namespace="VehicleProperty" name="DOOR_POS" halmapping="listener" />
+    <property class="VehicleStatusController" method="WirelessChargingSystemChargingStatusListener" namespace="VendorProperty" name="WIRELESS_CHARGING_SYSTEM_CHARGING_STATUS" halmapping="listener" />
+    <property class="VehicleStatusController" method="DisplayChangeProvidedAllowedListener" namespace="PatacProperty" name="INTERIOR_DIMMING_DISPLAY_CHANGE_PROVIDED_ALLOWED" halmapping="listener" />
+    <property class="VehicleStatusController" method="DisplayLevelListener" namespace="PatacProperty" name="INTERIOR_DIMMING_DISPLAY_LEVEL" halmapping="listener" />
+    <property class="VehicleStatusController" method="InteriorDimmingChangeProvidedAllowedListener" namespace="PatacProperty" name="INTERIOR_DIMMING_CHANGE_PROVIDED_ALLOWED" halmapping="listener" />
+    <property class="VehicleStatusController" method="InteriorDimmingBackLightingLevelListener" namespace="PatacProperty" name="INTERIOR_DIMMING_BACKLIGHTING_LEVEL" halmapping="listener" />
+    <property class="VehicleStatusController" method="OutsideTemperatureListener" namespace="VehicleProperty" name="ENV_OUTSIDE_TEMPERATURE" halmapping="listener" />
+    <property class="VehicleStatusController" method="BarometricPressureAbsoluteListener" namespace="VendorProperty" name="BAROMETRIC_PRESSURE_ABSOLUTE" halmapping="listener" />
+    <property class="VehicleStatusController" method="VehicleRollAngleListener" namespace="VendorProperty" name="VEHICLE_ROLL_ANGLE" halmapping="listener" />
+    <property class="VehicleStatusController" method="VehiclePitchAngleListener" namespace="VendorProperty" name="VEHICLE_PITCH_ANGLE" halmapping="listener" />
+    <property class="VehicleStatusController" method="DriverDoorAjarStatusListener" namespace="PatacProperty" name="DRIVER_DOOR_AJAR_STATUS" halmapping="listener" />
+    <property class="VehicleStatusController" method="RearViewMirrorPosListener" namespace="PatacProperty" name="MIRROR_POSITION_STATUS" halmapping="listener" />
+    <property class="VehicleStatusController" method="SystemPowerModeListener" namespace="PatacProperty" name="SYSTEM_POWER_MODE" halmapping="listener" />
+    <property class="VehicleStatusController" method="AcceleratorActualPosAuthListener" namespace="VendorProperty" name="ACCELERATOR_ACTUAL_POSITION" halmapping="listener" />
+    <property class="VehicleStatusController" method="BrakePedalPosAuthListener" namespace="VendorProperty" name="BRAKE_PEDAL_POSITION" halmapping="listener" />
+    <property class="PowertainController" method="EngineSpeedListener" namespace="VendorProperty" name="TACHOMETER_ENGINE_SPEED" halmapping="listener" />
+    <property class="PowertainController" method="BrakeRemainingListener" namespace="VendorProperty" name="BRAKE_PAD_LIFE_REAR_DISTANCE_REMAINING" halmapping="listener" />
+    <property class="PowertainController" method="IgnitionStateListener" namespace="VehicleProperty" name="IGNITION_STATE" halmapping="listener" />
+    <property class="PowertainController" method="TirePressureMonitoringSysFailedListener" namespace="VendorProperty" name="TIRE_PRESSURE_MONITORING_SYSTEM_FAILED" halmapping="listener" />
+    <property class="PowertainController" method="TpmsStatusRrListener" namespace="VendorProperty" name="TPMS_STATUS_RR" halmapping="listener" />
+    <property class="PowertainController" method="TpmsStatusLrListener" namespace="VendorProperty" name="TPMS_STATUS_LR" halmapping="listener" />
+    <property class="PowertainController" method="TpmsStatusRfListener" namespace="VendorProperty" name="TPMS_STATUS_RF" halmapping="listener" />
+    <property class="PowertainController" method="TpmsStatusLfListener" namespace="VendorProperty" name="TPMS_STATUS_LF" halmapping="listener" />
+    <property class="PowertainController" method="TirePressureChangeListener" namespace="VehicleProperty" name="TIRE_PRESSURE" halmapping="listener" />
+    <property class="PowertainController" method="BrakeHealthMonitorSystemStatusListener" namespace="PatacProperty" name="BRAKE_HEALTH_MONITOR_SYSTEM_STATUS" halmapping="listener" />
+    <property class="PowertainController" method="FrontBrakePadLifePercentageListener" namespace="VendorProperty" name="BRAKE_PAD_LIFE_FRONT" halmapping="listener" />
+    <property class="PowertainController" method="RearBrakePadLifePercentageListener" namespace="VendorProperty" name="BRAKE_PAD_LIFE_REAR" halmapping="listener" />
+    <property class="PowertainController" method="FrontBrakePadRemainLifeStatusListener" namespace="PatacProperty" name="FRONT_BRAKE_PAD_LOW" halmapping="listener" />
+    <property class="PowertainController" method="RearBrakePadRemainLifeStatusListener" namespace="PatacProperty" name="REAR_BRAKE_PAD_LOW" halmapping="listener" />
+    <property class="PowertainController" method="BrakePartWearInitializeStatusListener" namespace="PatacProperty" name="BRAKE_PART_WEAR_INITIALIZE_STATUS" halmapping="listener" />
+    <property class="PowertainController" method="FrontRotorRemainmileageListener" namespace="PatacProperty" name="FRONT_ROTOR_REMAIN_MILEAGE" halmapping="listener" />
+    <property class="PowertainController" method="RearRotorRemainmileageListener" namespace="PatacProperty" name="REAR_ROTOR_REMAIN_MILEAGE" halmapping="listener" />
+    <property class="PowertainController" method="FrontBrakeRotorLowStatusListener" namespace="PatacProperty" name="FRONT_BRAKE_ROTOR_LOW" halmapping="listener" />
+    <property class="PowertainController" method="RearBrakeRotorLowListener" namespace="PatacProperty" name="REAR_BRAKE_ROTOR_LOW" halmapping="listener" />
+    <property class="PowertainController" method="FrontBrakeTemperatureListener" namespace="PatacProperty" name="FRONT_BRAKE_TEMPERATURE" halmapping="listener" />
+    <property class="PowertainController" method="RearBrakeTemperatureListener" namespace="PatacProperty" name="REAR_BRAKE_TEMPERATURE" halmapping="listener" />
+    <property class="PowertainController" method="BrakeTemperatureWarmingListener" namespace="PatacProperty" name="BRAKE_TEMPERATURE_WARMING" halmapping="listener" />
+    <property class="PowertainController" method="BatteryVoltageListener" namespace="VendorProperty" name="BATTERY_VOLTAGE" halmapping="listener" />
+    <property class="PowertainController" method="BatteryVoltageIndicationRequestListener" namespace="VendorProperty" name="BATTERY_VOLTAGE_INDICATION_REQUEST" halmapping="listener" />
+    <property class="PowertainController" method="EngineOilRemainingLifeListener" namespace="VendorProperty" name="ENGINE_OIL_REMAINING_LIFE" halmapping="listener" />
+    <property class="PowertainController" method="EngineOilChangeIndicationOnListener" namespace="VendorProperty" name="ENGINE_OIL_CHANGE_INDICATION_ON" halmapping="listener" />
+    <property class="PowertainController" method="FuelFilterRemainingLifeListener" namespace="VendorProperty" name="FUEL_FILTER_REMAINING_LIFE" halmapping="listener" />
+    <property class="PowertainController" method="FuelFilterChangeNowIndicationOnListener" namespace="VendorProperty" name="FUEL_FILTER_CHANGE_NOW_INDICATION_ON" halmapping="listener" />
+    <property class="PowertainController" method="EngineAirFilterLifeRemainingListener" namespace="VendorProperty" name="ENGINE_AIR_FILTER_LIFE_REMAINING" halmapping="listener" />
+    <property class="PowertainController" method="EngineAirFilterMonitorStatusListener" namespace="VendorProperty" name="ENGINE_AIR_FILTER_MONITOR_STATUS" halmapping="listener" />
+    <property class="PowertainController" method="EngineAirFilterMonitorDriverRequestListener" namespace="VendorProperty" name="ENGINE_AIR_FILTER_MONITOR_DRIVER_REQUEST" halmapping="listener" />
+    <property class="PowertainController" method="SpeedOfVehicleListener" namespace="VehicleProperty" name="PERF_VEHICLE_SPEED" halmapping="listener" />
+    <property class="PowertainController" method="LongitudinalAccelerationListener" namespace="VendorProperty" name="LONGITUDINAL_ACCELERATION" halmapping="listener" />
+    <property class="PowertainController" method="CurrentlySelectedGearListener" namespace="VehicleProperty" name="GEAR_SELECTION" halmapping="listener" />
+    <property class="PowertainController" method="LateralAccelerationListener" namespace="VendorProperty" name="LATERAL_ACCELERATION" halmapping="listener" />
+    <property class="PowertainController" method="CurrentOdometerValueListener" namespace="VehicleProperty" name="PERF_ODOMETER" halmapping="listener" />
+    <property class="PowertainController" method="HighVoltageBatteryRemainingUsableEnergyListener" namespace="VendorProperty" name="HIGH_VOLTAGE_BATTERY_REMAINING_USABLE_ENERGY" halmapping="listener" />
+    <property class="PowertainController" method="FuelCapacityValueListener" namespace="VehicleProperty" name="INFO_FUEL_CAPACITY" halmapping="listener" />
+    <property class="PowertainController" method="FuelRemainingValueListener" namespace="VehicleProperty" name="FUEL_LEVEL" halmapping="listener" />
+    <property class="PowertainController" method="FuelLevelPercentListener" namespace="PatacProperty" name="FUEL_INFORMATION_FILTERED_DISPLAY_TOTAL_FUEL_LEVEL_PERCENT" halmapping="listener" />
+    <property class="PowertainController" method="RangeRemainingListener" namespace="VehicleProperty" name="RANGE_REMAINING" halmapping="listener" />
+    <property class="PowertainController" method="WarningForFuelLowLevelListener" namespace="VehicleProperty" name="FUEL_LEVEL_LOW" halmapping="listener" />
+    <property class="PowertainController" method="DistanceDisplayUnitsListener" namespace="VehicleProperty" name="DISTANCE_DISPLAY_UNITS" halmapping="listener" />
+    <property class="PowertainController" method="FuelVolumeDisplayUnitsListener" namespace="VehicleProperty" name="FUEL_VOLUME_DISPLAY_UNITS" halmapping="listener" />
+    <property class="PowertainController" method="TirePressureDisplayUnitsListener" namespace="VehicleProperty" name="TIRE_PRESSURE_DISPLAY_UNITS" halmapping="listener" />
+    <property class="PowertainController" method="EngineOilPressureListener" namespace="VendorProperty" name="ENGINE_OIL_PRESSURE" halmapping="listener" />
+    <property class="PowertainController" method="EngineOilTempListener" namespace="VehicleProperty" name="ENGINE_OIL_TEMP" halmapping="listener" />
+    <property class="PowertainController" method="CurrentGearListener" namespace="VehicleProperty" name="CURRENT_GEAR" halmapping="listener" />
+    <property class="PowertainController" method="VehicleMotionMovementStateListener" namespace="VendorProperty" name="VEHICLE_MOTION_MOVEMENT_STATE" halmapping="listener" />
+    <property class="PowertainController" method="FourAndAllWheelDriveIndicationListener" namespace="VendorProperty" name="FOUR_AND_ALL_WHEEL_DRIVE_INDICATION_REQUEST" halmapping="listener" />
+    <property class="PowertainController" method="EngineBoostPressureIndicationListener" namespace="VendorProperty" name="ENGINE_BOOST_PRESSURE_INDICATION" halmapping="listener" />
+    <property class="PowertainController" method="EngineActualSteadyStateTorqueListener" namespace="VendorProperty" name="ENGINE_ACTUAL_STEADY_STATE_TORQUE" halmapping="listener" />
+    <property class="PowertainController" method="AcceleratorActualPositionListener" namespace="VendorProperty" name="ACCELERATOR_ACTUAL_POSITION" halmapping="listener" />
+    <property class="PowertainController" method="BrakePedalPositionListener" namespace="VendorProperty" name="BRAKE_PEDAL_POSITION" halmapping="listener" />
+    <property class="PowertainController" method="RemoteReflashElecticPowerReadinessListener" namespace="VendorProperty" name="REMOTE_REFLASH_ELECTIC_POWER_READINESS" halmapping="listener" />
+    <property class="PowertainController" method="EngineRunningListener" namespace="VendorProperty" name="ENGINE_RUNNING" halmapping="listener" />
+    <property class="PowertainController" method="ElectricParkBrakeApplicationStatusListener" namespace="VendorProperty" name="ELECTRIC_PARK_BRAKE_APPLICATION_STATUS" halmapping="listener" />
+    <property class="PowertainController" method="RemoteReflashCampaignAvailableListener" namespace="VendorProperty" name="REMOTE_REFLASH_CAMPAIGN_AVAILABLE" halmapping="listener" />
+    <property class="PowertainController" method="ParkingBrakeOnListener" namespace="VehicleProperty" name="PARKING_BRAKE_ON" halmapping="listener" />
+    <property class="PowertainController" method="RemoteVehicleStartEngineRunningListener" namespace="VendorProperty" name="REMOTE_VEHICLE_START_ENGINE_RUNNING" halmapping="listener" />
+    <property class="PowertainController" method="CompassOctantHeadingListener" namespace="VendorProperty" name="COMPASS_OCTANT_HEADING" halmapping="listener" />
+    <property class="PowertainController" method="GnssSpaceVehicleInformationListener" namespace="VendorProperty" name="GNSS_SPACE_VEHICLE_INFORMATION" halmapping="listener" />
+    <property class="PowertainController" method="HighVoltageBatteryBulkChargeCompleteListener" namespace="VendorProperty" name="HIGH_VOLTAGE_BATTERY_BULK_CHARGE_COMPLETE" halmapping="listener" />
+    <property class="PowertainController" method="HighVoltageBatteryBulkStateOfChargeListener" namespace="VendorProperty" name="HIGH_VOLTAGE_BATTERY_BULK_STATE_OF_CHARGE" halmapping="listener" />
+    <property class="PowertainController" method="HighVoltageBatteryStateOfChargeBatteryStateOfChargeListener" namespace="VendorProperty" name="HIGH_VOLTAGE_BATTERY_STATE_OF_CHARGE_BATTERY_STATE_OF_CHARGE" halmapping="listener" />
+    <property class="PowertainController" method="HighVoltageBatteryAverageTemperatureListener" namespace="VendorProperty" name="HIGH_VOLTAGE_BATTERY_AVERAGE_TEMPERATURE" halmapping="listener" />
+    <property class="PowertainController" method="HighVoltageBatteryMaximumTemperatureListener" namespace="VendorProperty" name="HIGH_VOLTAGE_BATTERY_MAXIMUM_TEMPERATURE" halmapping="listener" />
+    <property class="PowertainController" method="HighVoltageBatteryMinimumTemperatureListener" namespace="VendorProperty" name="HIGH_VOLTAGE_BATTERY_MINIMUM_TEMPERATURE" halmapping="listener" />
+    <property class="PowertainController" method="HighVoltageChargeSystemStatusListener" namespace="VendorProperty" name="HIGH_VOLTAGE_CHARGER_SYSTEM_STATUS" halmapping="listener" />
+    <property class="PowertainController" method="InfoEvBatteryCapacityListener" namespace="VehicleProperty" name="INFO_EV_BATTERY_CAPACITY" halmapping="listener" />
+    <property class="PowertainController" method="EvBatteryLevelListener" namespace="VehicleProperty" name="EV_BATTERY_LEVEL" halmapping="listener" />
+    <property class="PowertainController" method="HighVoltageBatteryChargeCompleteListener" namespace="VendorProperty" name="HIGH_VOLTAGE_BATTERY_CHARGE_COMPLETE" halmapping="listener" />
+    <property class="PowertainController" method="HighVoltageBatteryOutOfEnergyIndicationRequestListener" namespace="VendorProperty" name="VEHICLE_MASS_ESTIMATE_STATUS" halmapping="listener" />
+    <property class="PowertainController" method="FcmSpeedLimitSignSpeedLimitValueListener" namespace="PatacProperty" name="FCM_SPEED_LIMIT_SIGN_SPEED_LIMIT_VALUE" halmapping="listener" />
+    <property class="PowertainController" method="FcmSpeedLimitSignSpeedLimitValueAssuredListener" namespace="PatacProperty" name="FCM_SPEED_LIMIT_SIGN_SPEED_LIMIT_VALUE_ASSURED" halmapping="listener" />
+</Controller>

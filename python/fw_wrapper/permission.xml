@@ -1,0 +1,2375 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>amai</Author>
+  <LastAuthor>amai</LastAuthor>
+  <Created>2021-06-24T08:43:57Z</Created>
+  <Version>16.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <SupBook>
+   <Path>PropertyRelease__CAN_0.0.0.6.xlsx</Path>
+   <SheetName>ReleaseNote</SheetName>
+   <SheetName>spec2Property</SheetName>
+   <SheetName>spec2Property-refactor</SheetName>
+   <SheetName>Sheet2</SheetName>
+   <SheetName>Property-interface</SheetName>
+   <SheetName>signalTest-CLEA</SheetName>
+   <SheetName>signalTest-GB</SheetName>
+   <SheetName>Zone 补充说明</SheetName>
+   <SheetName>Property-interface (2)</SheetName>
+   <SheetName>UTSignal-GB</SheetName>
+   <SheetName>UTSignal-CLEA</SheetName>
+   <SheetName>permission-org</SheetName>
+   <SheetName>权限-used all</SheetName>
+   <SheetName>dup确认</SheetName>
+   <SheetName>问题修正状态汇总</SheetName>
+   <SheetName>信号测试状态汇总</SheetName>
+   <SheetName>Property-all-Code</SheetName>
+   <SheetName>CLEA-23.38</SheetName>
+   <Xct>
+    <Count>0</Count>
+    <SheetIndex>11</SheetIndex>
+   </Xct>
+  </SupBook>
+  <WindowHeight>12165</WindowHeight>
+  <WindowWidth>28800</WindowWidth>
+  <WindowTopX>32767</WindowTopX>
+  <WindowTopY>32767</WindowTopY>
+  <Calculation>SemiAutomaticCalculation</Calculation>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Center"/>
+   <Borders/>
+   <Font ss:FontName="等线" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s62" ss:Name="Normal 4">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="等线" x:CharSet="134" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s63" ss:Parent="s62">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Top"/>
+   <Font ss:FontName="等线" x:CharSet="134" ss:Size="9"/>
+  </Style>
+  <Style ss:ID="s64" ss:Parent="s62">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Top"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="2"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="2"/>
+   </Borders>
+   <Font ss:FontName="微软雅黑" x:CharSet="134" x:Family="Swiss" ss:Size="9"/>
+   <Interior ss:Color="#D9D9D9" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s65">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="2"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s66" ss:Parent="s62">
+   <Alignment ss:Horizontal="Left" ss:Vertical="Top"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="2"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+   <Font ss:FontName="等线" x:CharSet="134" ss:Size="9"/>
+  </Style>
+  <Style ss:ID="s67">
+   <Alignment ss:Vertical="Bottom"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Sheet1">
+  <Table ss:ExpandedColumnCount="2" ss:ExpandedRowCount="562" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="14.25">
+   <Column ss:AutoFitWidth="0" ss:Width="332.25"/>
+   <Column ss:StyleID="s63" ss:AutoFitWidth="0" ss:Width="289.5"/>
+   <Row ss:Height="15"/>
+   <Row>
+    <Cell><Data ss:Type="String">Property Name</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Permission</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HVAC_FAN_SPEED</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CONTROL_CAR_CLIMATE</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HVAC_FAN_SPEED_STEP</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HVAC_FAN_DIRECTION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CONTROL_CAR_CLIMATE</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HVAC_TEMPERATURE_CURRENT</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CONTROL_CAR_CLIMATE</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HVAC_TEMPERATURE_SET</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CONTROL_CAR_CLIMATE</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HVAC_TEMPERATURE_SET_STEP</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HVAC_DEFROSTER</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CONTROL_CAR_CLIMATE</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HVAC_AC_ON</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CONTROL_CAR_CLIMATE</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HVAC_MAX_AC_ON</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CONTROL_CAR_CLIMATE</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HVAC_MAX_DEFROST_ON</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CONTROL_CAR_CLIMATE</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HVAC_RECIRC_ON</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CONTROL_CAR_CLIMATE</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HVAC_DUAL_ON</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CONTROL_CAR_CLIMATE</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HVAC_AUTO_ON</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CONTROL_CAR_CLIMATE</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HVAC_SEAT_TEMPERATURE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CONTROL_CAR_CLIMATE</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HVAC_SIDE_MIRROR_HEAT</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CONTROL_CAR_CLIMATE</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HVAC_STEERING_WHEEL_HEAT</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CONTROL_CAR_CLIMATE</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HVAC_TEMPERATURE_DISPLAY_UNITS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CONTROL_CAR_CLIMATE</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HVAC_ACTUAL_FAN_SPEED_RPM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CONTROL_CAR_CLIMATE</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HVAC_POWER_ON</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CONTROL_CAR_CLIMATE</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HVAC_FAN_DIRECTION_AVAILABLE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CONTROL_CAR_CLIMATE</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HVAC_AUTO_RECIRC_ON</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CONTROL_CAR_CLIMATE</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HVAC_SEAT_VENTILATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CONTROL_CAR_CLIMATE</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HVAC_AUTO_FAN_DIRECTION_ACTIVE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HVAC_TEMPERATURE_AUTO_HIGH</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HVAC_TEMPERATURE_AUTO_LOW</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HVAC_FAN_SPEED_AUTO_ACTIVE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HVAC_AC_COMP_ECON_ACTIVE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HVAC_HEATER_SETTING</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HVAC_REAR_LOCK</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HVAC_IONIZER_STATE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HVAC_IONIZER_STATE_CHANGE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HVAC_SINGLE_SEAT_MODE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HVAC_PM25</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HVAC_PM10</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HVAC_AQI</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HVAC_CO2</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">INDICATION_AC_ON_FOR_BATTERY_COOLING_MESSAGE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">INDICATION_FOG_PROTECTION_TAKING_FRESH_AIR_ACTION_MESSAGE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">INDICATION_AIR_QUALITY_SYSTEM_TAKING_RECIRC_ACTION_MESSAGE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">INDICATION_LOW_SPEED_POLLUTION_TAKING_RECIRC_ACTION_MESSAGE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">INDICATION_HEATER_SETTING</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HVAC_INFOTAINMENT_CONTROLS_REQUEST_BLOWER_SPEED_REDUCTION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ADAPTIVE_CRUISE_CONTROL_AUTO_SET_SPEED_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ADAPTIVE_CRUISE_CONTROL_ROUTE_SPEED_ADAPTATION_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">AIR_QUALITY_SENSOR_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">AUTOMATIC_COOLED_SEAT_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">AUTOMATIC_DEFOG_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">AUTOMATIC_DRIVE_LOCKING_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">AUTOMATIC_FAN_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">AUTOMATIC_HEATED_SEAT_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">AUTOMATIC_UNLOCKING_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">AUTO_APPLY_EPB_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">AUTO_CLOSE_MOVABLE_WINDOW_DRIVING_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">AUTO_CLOSE_MOVABLE_WINDOW_REMOTE_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">AUTO_HIGH_BEAM_ASSIST_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">AUTO_MEMORY_RECALL_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">AUTO_MIRROR_FOLD_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">AUTO_REAR_WIPE_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">CABIN_AIR_QUALITY_CONTROL_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">COLLISION_PREPARATION_SYSTEM_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">CUSTOM_MODE_AVH_SELECTION_OF_GEAR_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">CUSTOM_MODE_STEERING_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">DAYTIME_TAIL_LIGHTS_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">EASY_EXIT_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">EXIT_LIGHTING_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">FORWARD_IMPACT_MITIGATION_OPERATION_SELECT_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">FRONT_PCM_RESPONSE_TYPE_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">GO_NOTIFIER_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HVAC_REMOTE_START_SETTING_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">IONIZER_CONTROL_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">LANE_CHANGE_ALERT_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">LANE_CHANGE_BY_COMMAND_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">LANE_DETECTION_WARNING_AND_CONTROL_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">LAST_DOOR_CLOSED_LOCKING_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">OPEN_DOOR_ANTI_LOCK_OUT_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">OSRVM_COMFORT_FOLD_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PARK_ASSIST_ON_OFF_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PASSIVE_UNLOCKING_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">RAIN_SENSE_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_CROSS_TRAFFIC_ALERT_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_DEFOG_STARTUP_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_SEAT_REMINDER_ENABLE_DISABLE_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_VIRTUAL_BUMPER_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_ZONE_STARTUP_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">RELOCK_REMOTE_UNLOCKED_DOOR_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REMOTE_IN_VEHICLE_REMINDER_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REMOTE_LEFT_VEHICLE_REMINDER_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REMOTE_LOCKING_FEEDBACK_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SELECTIVE_UNLOCKING_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REMOTE_START_COOLED_SEAT_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REMOTE_START_HEATED_SEAT_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REMOTE_START_HEAT_STEERING_WHEEL_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REMOTE_UNLOCK_LIGHTING_FEEDBACK_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REMOTE_WINDOW_OPERATION_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REVERSE_TILT_MIRROR_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REVERSE_TILT_MIRROR_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SIDE_BLIND_ZONE_ALERT_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SUSPENSION_PERFORMANCE_MODE_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">TRAFFIC_SIGN_MEMORY_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VEHICLE_GREET_MODE_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VEHICLE_LOCATOR_LIGHTS_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">WALK_AWAY_LOCKING_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">INTERIOR_AMBIENT_COLOR_CONTROL_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">INTERIOR_AMBIENT_BRIGHTNESS_CONTROL_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_CROSS_TRAFFIC_ASSIST_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">DOOR_OPENING_WARNING_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">RESTORE_CUSTOMIZATION_DEFAULTS_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">RESTORE_CUSTOMIZATION_FACTORY_DEFAULTS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">CUSTOM_MODE_DRIVELINE_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">CUSTOM_MODE_POWERTRAIN_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">CUSTOM_MODE_BRAKE_PEDAL_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">CUSTOM_MODE_SOUND_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">CUSTOM_MODE_SUSPENSION_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">CUSTOM_MODE_ACTIVE_AERO_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">CUSTOM_MODE_RIDE_HEIGHT_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">CUSTOM_MODE_ENERGY_REGENERATION_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">CUSTOM_MODE_ELECTRIC_VEHICLE_PEDAL_MAP_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PERSONAL_MODE_SOUND_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PERSONAL_MODE_STEERING_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PERSONAL_MODE_SUSPENSION_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PERSONAL_MODE_DRIVELINE_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PERSONAL_MODE_BRAKE_PEDAL_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PERSONAL_MODE_RIDE_HEIGHT_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PERSONAL_MODE_ACTIVE_AERO_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PERSONAL_MODE_ENERGY_REGENERATION_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PERSONAL_MODE_ELECTRIC_VEHICLE_PEDAL_MAP_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ONE_PEDAL_DRIVING_CURRENT_SELECTION_VALUE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ONE_PEDAL_DRIVING_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ONE_PEDAL_DRIVING_CUSTOMIZATION_ALLOWED_FLAG</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VIRTUAL_ONE_PEDAL_DRIVING_USER_CONTROL_ALLOWED</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VIRTUAL_ONE_PEDAL_DRIVING_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">红色部分：GB只有property定义，未实现&#10;黑体部分：GB only</Data></Cell>
+    <Cell ss:StyleID="s66"/>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">DRIVE_MODE_NAME</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">DRIVE_MODE_STATUS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VIRTUAL_CONTROL_DRIVE_MODE_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PERFORMANCE_MODE_MAIN_MENU_TYPE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">POWER_REAR_CLOSURE_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">NAVIGATION_ON_ADAS_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ADAS_PERFORMANCE_MODE_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">NAVIGATION_ON_ADAS_LANE_CHANGE_TYPE_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">LANE_CENTERING_ADAPTIVE_OFFSET_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">TRAFFIC_LIGHT_AND_STOP_LINE_CONTROL_CUSTOMIZATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">TRAFFIC_SIGN_MEMORY_CUSTOMER_RESET_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">FUEL_LEVEL</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_ENERGY</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">INFO_FUEL_CAPACITY</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_INFO</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PERF_ODOMETER</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_MILEAGE</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PERF_VEHICLE_SPEED</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_SPEED</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HIGH_VOLTAGE_BATTERY_REMAINING_USABLE_ENERGY</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">TIRE_PRESSURE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_TIRES</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">BATTERY_VOLTAGE_INDICATION_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ENGINE_AIR_FILTER_LIFE_REMAINING</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ENGINE_AIR_FILTER_MONITOR_STATUS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ENGINE_OIL_CHANGE_INDICATION_ON</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ENGINE_OIL_REMAINING_LIFE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">FUEL_FILTER_CHANGE_NOW_INDICATION_ON</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">FUEL_FILTER_REMAINING_LIFE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">FUEL_INJECTED_ROLLING_COUNT</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">TIRE_LEAK_DETECTION_STATUS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">TPMS_STATUS_LF</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">TPMS_STATUS_LR</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">TPMS_STATUS_RF</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">TPMS_STATUS_RR</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">TPMS_TIRE_LOCATION_WARNINGS_ENABLED</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">TRANSMISSION_OIL_TEMPERATURE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">GEAR_SELECTION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_POWERTRAIN</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">CURRENT_GEAR</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_POWERTRAIN</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">RANGE_REMAINING</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_ENERGY</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">WHEEL_TICK</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_SPEED</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ENV_OUTSIDE_TEMPERATURE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_EXTERIOR_ENVIRONMENT</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">INFO_DRIVER_SEAT</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_INFO</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">INFO_MAKE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_INFO</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">INFO_MODEL</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_INFO</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">INFO_MODEL_YEAR</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_INFO</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">IGNITION_STATE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_POWERTRAIN</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PARKING_BRAKE_ON</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_POWERTRAIN</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">FUEL_LEVEL_LOW</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_ENERGY</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">NIGHT_MODE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_EXTERIOR_ENVIRONMENT</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">DISTANCE_DISPLAY_UNITS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.READ_CAR_DISPLAY_UNITS</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">FUEL_VOLUME_DISPLAY_UNITS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.READ_CAR_DISPLAY_UNITS</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">TIRE_PRESSURE_DISPLAY_UNITS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.READ_CAR_DISPLAY_UNITS</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">FUEL_CONSUMPTION_UNITS_DISTANCE_OVER_VOLUME</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.READ_CAR_DISPLAY_UNITS</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">DOOR_POS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CONTROL_CAR_DOORS</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">FOG_LIGHTS_STATE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_EXTERIOR_LIGHTS</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HAZARD_LIGHTS_STATE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_EXTERIOR_LIGHTS</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HIGH_BEAM_LIGHTS_STATE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_EXTERIOR_LIGHTS</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">TURN_SIGNAL_STATE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_EXTERIOR_LIGHTS</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ABS_ACTIVE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_DYNAMICS_STATE</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">TRACTION_CONTROL_ACTIVE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_DYNAMICS_STATE</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ENGINE_OIL_LEVEL</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_ENGINE_DETAILED</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ENGINE_OIL_TEMP</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_ENGINE_DETAILED</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PERF_STEERING_ANGLE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.READ_CAR_STEERING</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">INFO_EV_CONNECTOR_TYPE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_INFO</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">INFO_FUEL_TYPE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_INFO</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">EV_BATTERY_DISPLAY_UNITS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.READ_CAR_DISPLAY_UNITS</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HW_KEY_INPUT</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">FORWARD_VEHICLE_IMMINENT_ALERT_INDICATION_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">LONGITUDINAL_ACCELERATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">LATERAL_ACCELERATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">WIRELESS_CHARGING_SYSTEM_CHARGING_STATUS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">BAROMETRIC_PRESSURE_ABSOLUTE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VEHICLE_ROLL_ANGLE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VEHICLE_PITCH_ANGLE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">LEFT_TURN_LAMP_ACTIVE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">RIGHT_TURN_LAMP_ACTIVE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">LANE_CENTERING_CONVENIENCE_SIGNAL_GROUP_LANE_CENTERING_CONTROL_INDICATION_REQUEST_FCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">LANE_CENTERING_CONVENIENCE_SIGNAL_GROUP_LANE_CENTERING_CONTROL_INDICATION_REQUEST_IDCM_A</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VEHICLE_CENTERLINE_DISTANCE_TO_LEFT_LANE_MARKING</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VEHICLE_CENTERLINE_DISTANCE_TO_RIGHT_LANE_MARKING</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SYSTEM_POWER_MODE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">DRIVER_SEAT_BELT_REMINDER_INDICATION_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">TACHOMETER_ENGINE_SPEED</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">TIRE_PRESSURE_MONITORING_SYSTEM_FAILED</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">BRAKE_HEALTH_MONITOR_SYSTEM_STATUS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">BRAKE_PAD_LIFE_FRONT</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">BRAKE_PAD_LIFE_REAR</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">BRAKE_PAD_LIFE_FRONT_DISTANCE_REMAINING</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">BRAKE_PAD_LIFE_REAR_DISTANCE_REMAINING</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">FRONT_BRAKE_PAD_LOW</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_BRAKE_PAD_LOW</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">FRONT_PAD_WEAR_INITIALIZE_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_PAD_WEAR_INITIALIZE_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">BRAKE_PART_WEAR_INITIALIZE_STATUS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">FRONT_ROTOR_REMAIN_MILEAGE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_ROTOR_REMAIN_MILEAGE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">FRONT_BRAKE_TEMPERATURE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_BRAKE_TEMPERATURE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">BRAKE_TEMPERATURE_WARMING</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PM_2_5_FILTER_REMAINING_LIFE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PM_2_5_FILTER_REMAINING_LIFE_VALIDITY</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">CUSTOMER_RESET_PM_2_5_FILTER_REMAINING_LIFE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ENGINE_AIR_FILTER_MONITOR_DRIVER_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">FRONT_PASSENGER_RESTRAINT_OCCUPANCY_STATUS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">DRIVER_DOOR_AJAR_STATUS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">FRONT_BRAKE_ROTOR_LOW</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">FRONT_ROTOR_WEAR_INITIALIZE_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_ROTOR_WEAR_INITIALIZE_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">BATTERY_VOLTAGE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_BRAKE_ROTOR_LOW</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ENGINE_OIL_LIFE_RESET_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">FUEL_FILTER_LIFE_RESET_REQUESTED</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">V_2_X_WARNING_DISTANCE_REMAINING</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REMOTE_VEHICLE_POSITION_LATITUDE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REMOTE_VEHICLE_POSITION_LONGITUDE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VIRTUAL_ONE_PEDAL_DRIVING_CONTROL_AVAILABLE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">INTERIOR_DIMMING_CHANGE_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">INTERIOR_DIMMING_DISPLAY_CHANGE_PROVIDED_ALLOWED</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">INTERIOR_DIMMING_DISPLAY_CHANGE_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">INTERIOR_DIMMING_CHANGE_PROVIDED_ALLOWED</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">INTERIOR_DIMMING_DISPLAY_LEVEL</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">INTERIOR_DIMMING_BACKLIGHTING_LEVEL</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ENGINE_OIL_PRESSURE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">FUEL_INFORMATION_FILTERED_DISPLAY_TOTAL_FUEL_LEVEL_PERCENT</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ADAPTIVE_CRUISE_CONTROL_ENGAGED</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">DOOR_POS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CONTROL_CAR_DOORS</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">FOG_LIGHTS_STATE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_EXTERIOR_LIGHTS</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ADVANCED_PARK_ASSIST_VCU_SIGNAL_GROUP_PARK_ASSIST_SOFT_BUTTON_SELECTED_STATE_RAW</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">AUTO_HIGH_BEAM_CONTROL_INDICATION_ON</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">AUTO_HOLD_DISABLED_DOOR_OPEN_INDICATION_ON</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">AUTO_HOLD_DISABLED_SEATBELT_INDICATION_ON</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">AUTO_HOLD_ENABLED</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">AUTO_VEHICLE_HOLD_CONFIGURATION_AVAILABILITY</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">AUTO_VEHICLE_HOLD_SCREEN_CONFIGURATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">AUTO_VEHICLE_HOLD_SWITCH_STATUS_VIRTUAL_BUTTON</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">DOME_LIGHT_DEFEAT_ACTIVE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">DOME_LIGHT_DEFEAT_CONFIGURATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">DOME_LIGHT_DEFEAT_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">DOME_LIGHT_OFF_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">DOME_LIGHT_ON_OFF_CONFIGURATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">DOME_LIGHT_ON_OFF_STATUS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">DOME_LIGHT_ON_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">DRIVER_HEATED_SEAT_CONFIGURATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">DRIVER_VENT_SEAT_CONFIGURATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VIRTUAL_CONTROL_POWER_WINDOW_LOCKOUT_STATUS_CONTROL_AVAILABLE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SUNROOF_CONTROL_AVAILABLE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">DRIVER_WINDOW_MOTION_STATUS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">DRIVER_WINDOW_NOT_NORMALIZED_INDICATION_ON</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">DRIVER_WINDOW_PERCENTAGE_POSITION_STATUS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">DRIVER_WINDOW_PERCENTAGE_POSITION_STATUS_VALIDITY</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">DRIVER_WINDOW_POSITION_STATUS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">FIRST_ROW_COOLED_SEAT_INDICATION_CONTROL_VALIDITY</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">FIRST_ROW_HEATED_SEAT_INDICATION_CONTROL_VALIDITY</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">FRONT_FOG_LAMPS_ACTIVE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SUNROOF_CONFIGURATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_SUNSHADE_CONTROL_AVAILABLE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">FRONT_SUNSHADE_CONTROL_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">FRONT_SUNSHADE_PERCENTAGE_CONTROL_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">FRONT_SUNSHADE_PERCENTAGE_POSITION_STATUS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">FRONT_SUNSHADE_PERCENTAGE_POSITION_STATUS_VALIDITY</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">FRONT_SUNSHADE_POSITION_STATUS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HEATED_STEERING_WHEEL_CONFIGURATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HEATED_STEERING_WHEEL_INDICATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HEATED_STEERING_WHEEL_LEVELS_AVAILABLE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HILL_DESCENT_CONTROL_CONFIGURATION_AVAILABILITY</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HILL_DESCENT_CONTROL_REDUCE_VEHICLE_SPEED_TO_ENABLE_INDICATION_ON</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HILL_DESCENT_CONTROL_SCREEN_CONFIGURATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HILL_DESCENT_CONTROL_SWITCH_STATUS_VIRTUAL_BUTTON</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HILL_DESCENT_CONTROL_SYSTEM_STATUS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HMI_SEAT_HEAT_COOL_SWITCHES_SIGNAL_GROUP_INFOTAINMENT_HEATED_STEERING_WHEEL_LEVEL_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HMI_WIPER_CONTROL_AVAILABLE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_ANIMATION_CONTROL_REQUEST_SERVICE_VCU</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_BLUE_COLOR_VALUE_SETTING_REQUEST_SERVICE_VCU</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_BRIGHTNESS_AND_RGB_VALIDITY_LED_ALL_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_BRIGHTNESS_LEVEL_SETTING_REQUEST_ENABLE_SERVICE_VCU</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_BRIGHTNESS_LEVEL_SETTING_REQUEST_SERVICE_VCU</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_GREEN_COLOR_VALUE_SETTING_REQUEST_SERVICE_VCU</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_ON_OFF_CONTROL_REQUEST_SERVICE_VCU</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_RED_COLOR_VALUE_SETTING_REQUEST_SERVICE_VCU</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_RGB_COLOR_VALUE_SETTING_REQUEST_ENABLE_SERVICE_VCU</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">LEFT_REAR_WINDOW_POSITION_STATUS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MAIN_LIGHT_SWITCH</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PARK_ASSIST_SOFT_BUTTON_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PASSENGER_HEATED_SEAT_CONFIGURATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PASSENGER_VENT_SEAT_CONFIGURATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_SUNSHADE_CONFIGURATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_RIGHT_WINDOW_CONFIGURATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PASSENGER_WINDOW_MOTION_STATUS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PASSENGER_WINDOW_NOT_NORMALIZED_INDICATION_ON</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PASSENGER_WINDOW_PERCENTAGE_POSITION_STATUS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PASSENGER_WINDOW_PERCENTAGE_POSITION_STATUS_VALIDITY</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PASSENGER_WINDOW_POSITION_STATUS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PERCENTAGE_WINDOW_CONTROL_SIGNAL_GROUP_DRIVER_WINDOW_CONTROL_POSITION_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PERCENTAGE_WINDOW_CONTROL_SIGNAL_GROUP_DRIVER_WINDOW_CONTROL_POSITION_REQUEST_ENABLE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PERCENTAGE_WINDOW_CONTROL_SIGNAL_GROUP_PASSENGER_WINDOW_CONTROL_POSITION_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PERCENTAGE_WINDOW_CONTROL_SIGNAL_GROUP_PASSENGER_WINDOW_CONTROL_POSITION_REQUEST_ENABLE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PERCENTAGE_WINDOW_CONTROL_SIGNAL_GROUP_REAR_LEFT_WINDOW_CONTROL_POSITION_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PERCENTAGE_WINDOW_CONTROL_SIGNAL_GROUP_REAR_LEFT_WINDOW_CONTROL_POSITION_REQUEST_ENABLE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PERCENTAGE_WINDOW_CONTROL_SIGNAL_GROUP_REAR_RIGHT_WINDOW_CONTROL_POSITION_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PERCENTAGE_WINDOW_CONTROL_SIGNAL_GROUP_REAR_RIGHT_WINDOW_CONTROL_POSITION_REQUEST_ENABLE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_FOG_LAMPS_ACTIVE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_LEFT_HEATED_SEAT_CONFIGURATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_RIGHT_WINDOW_AVAILABLE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_RIGHT_SIDE_SUNBLIND_CONFIGURATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_LEFT_SIDE_SUNBLIND_INFOTAINMENT_COMFORT_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_LEFT_SIDE_SUNBLIND_NORMALIZATION_REQUIRED_INDICATION_ON</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_LEFT_SIDE_SUNBLIND_POSITION_STATUS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_LEFT_VENT_SEAT_CONFIGURATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_RIGHT_SIDE_SUNBLIND_AVAILABLE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_LEFT_WINDOW_CONFIGURATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_LEFT_WINDOW_MOTION_STATUS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_LEFT_WINDOW_NOT_NORMALIZED_INDICATION_ON</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_LEFT_WINDOW_PERCENTAGE_POSITION_STATUS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_LEFT_WINDOW_PERCENTAGE_POSITION_STATUS_VALIDITY</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_RIGHT_HEATED_SEAT_CONFIGURATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_LEFT_WINDOW_AVAILABLE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_LEFT_SIDE_SUNBLIND_CONFIGURATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_RIGHT_SIDE_SUNBLIND_INFOTAINMENT_COMFORT_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_RIGHT_SIDE_SUNBLIND_NORMALIZATION_REQUIRED_INDICATION_ON</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_RIGHT_SIDE_SUNBLIND_POSITION_STATUS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_RIGHT_VENT_SEAT_CONFIGURATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_LEFT_SIDE_SUNBLIND_AVAILABLE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PASSENGER_WINDOW_CONFIGURATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_RIGHT_WINDOW_MOTION_STATUS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_RIGHT_WINDOW_NOT_NORMALIZED_INDICATION_ON</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_RIGHT_WINDOW_PERCENTAGE_POSITION_STATUS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_RIGHT_WINDOW_PERCENTAGE_POSITION_STATUS_VALIDITY</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PASSENGER_WINDOW_AVAILABLE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">INFO_VIN</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_IDENTIFICATION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_SUNSHADE_CONTROL_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_SUNSHADE_PERCENTAGE_CONTROL_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_SUNSHADE_PERCENTAGE_POSITION_STATUS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_SUNSHADE_PERCENTAGE_POSITION_STATUS_VALIDITY</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_SUNSHADE_POSITION_STATUS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">RIGHT_REAR_WINDOW_POSITION_STATUS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SEAT_PASSENGER_COMPARTMENT_MODE_AVAILABLE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SEAT_PASSENGER_COMPARTMENT_MODE_CONTROL_AVAILABLE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SEAT_PASSENGER_COMPARTMENT_MODE_CONFIGURATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SEAT_PASSENGER_COMPARTMENT_MODE_HMI_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SEAT_PASSENGER_COMPARTMENT_MODE_NOTIFICATION_HMI_DISPLAY_COMMAND_SERVICE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SECOND_ROW_COOLED_SEAT_INDICATION_CONTROL_VALIDITY</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SECOND_ROW_HEATED_SEAT_INDICATION_CONTROL_VALIDITY</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SERVICE_UP_PARKING_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">FRONT_SUNSHADE_CONTROL_AVAILABLE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">FRONT_SUNSHADE_CONFIGURATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SUNROOF_CONTROL_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SUNROOF_PERCENTAGE_CONTROL_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SUNROOF_PERCENTAGE_POSITION_STATUS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SUNROOF_PERCENTAGE_POSITION_STATUS_VALIDITY</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SUNROOF_POSITION_STATUS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">THIRD_ROW_COOLED_SEAT_INDICATION_CONTROL_VALIDITY</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">THIRD_ROW_HEATED_SEAT_INDICATION_CONTROL_VALIDITY</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">THIRD_ROW_LEFT_HEATED_SEAT_CONFIGURATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">THIRD_ROW_RIGHT_HEATED_SEAT_CONFIGURATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">THIRD_ROW_LEFT_VENT_SEAT_CONFIGURATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">THIRD_ROW_RIGHT_VENT_SEAT_CONFIGURATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VEHICLE_THEFT_NOTIFICATION_SIGNAL_GROUP_FTP_VCU_CONTROL_CONFIGURATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VEHICLE_THEFT_NOTIFICATION_SIGNAL_GROUP_FTP_CONTROL_AVAILABLE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VCU_EXTERIOR_LAMP_SWITCH_REQUEST_SIGNAL_GROUP_FTP_VCU_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VEHICLE_THEFT_NOTIFICATION_SIGNAL_GROUP_HAZARD_LAMP_VCU_CONTROL_CONFIGURATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VEHICLE_THEFT_NOTIFICATION_SIGNAL_GROUP_HAZARD_LAMP_CONTROL_AVAILABLE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VCU_EXTERIOR_LAMP_SWITCH_REQUEST_SIGNAL_GROUP_HAZARD_LAMP_VCU_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HAZARD_SWITCH_ACTIVE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">TRACTION_AND_STABILITY_SYSTEM_CURRENT_STATUS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">TRACTION_AND_STABILITY_SYSTEM_DRIVER_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">TRACTION_AND_STABILITY_SYSTEM_DRIVER_REQUEST_VALIDITY</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">TRACTION_AND_STABILITY_SYSTEM_SCREEN_CONFIGURATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">TRACTION_CONTROL_SYSTEM_DISABLE_AVAILABILITY</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">V_2_X_WARNING_INDICATION_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VCU_EXTERIOR_LAMP_SWITCH_REQUEST_SIGNAL_GROUP_AHBA_VCU_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VCU_EXTERIOR_LAMP_SWITCH_REQUEST_SIGNAL_GROUP_FRONT_FOG_VCU_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VCU_EXTERIOR_LAMP_SWITCH_REQUEST_SIGNAL_GROUP_MAIN_LIGHT_SWITCH_VCU_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VCU_EXTERIOR_LAMP_SWITCH_REQUEST_SIGNAL_GROUP_REAR_FOG_VCU_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VEHICLE_STABILITY_ENHANCEMENT_DISABLE_AND_TRACTION_CONTROL_SYSTEM_DISABLE_AVAILABILITY</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VEHICLE_STABILITY_ENHANCEMENT_ENABLE_AND_TRACTION_CONTROL_SYSTEM_ENABLE_AVAILABILITY</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VEHICLE_STABILITY_ENHANCEMENT_STATUS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VEHICLE_THEFT_NOTIFICATION_SIGNAL_GROUP_AHBA_CONTROL_REMINDER</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VEHICLE_THEFT_NOTIFICATION_SIGNAL_GROUP_AHBA_VCU_CONTROL_CONFIGURATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VEHICLE_THEFT_NOTIFICATION_SIGNAL_GROUP_FRONT_FOG_CONTROL_AVAILABLE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VEHICLE_THEFT_NOTIFICATION_SIGNAL_GROUP_FRONT_FOG_CONTROL_REMINDER</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VEHICLE_THEFT_NOTIFICATION_SIGNAL_GROUP_FRONT_FOG_VCU_CONTROL_CONFIGURATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VEHICLE_THEFT_NOTIFICATION_SIGNAL_GROUP_HEADLAMP_CONTROL_AVAILABLE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VEHICLE_THEFT_NOTIFICATION_SIGNAL_GROUP_HEADLAMP_CONTROL_REMINDER</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VEHICLE_THEFT_NOTIFICATION_SIGNAL_GROUP_MAIN_LIGHT_SWITCH_VCU_CONTROL_CONFIGURATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VEHICLE_THEFT_NOTIFICATION_SIGNAL_GROUP_REAR_FOG_CONTROL_AVAILABLE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VEHICLE_THEFT_NOTIFICATION_SIGNAL_GROUP_REAR_FOG_CONTROL_REMINDER</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VEHICLE_THEFT_NOTIFICATION_SIGNAL_GROUP_REAR_FOG_VCU_CONTROL_CONFIGURATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VIRTUAL_CONTROL_POWER_WINDOW_LOCKOUT_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">DRIVER_WINDOW_CONFIGURATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VIRTUAL_CONTROL_POWER_WINDOW_LOCKOUT_STATUS_CURRENT_SELECTION_VALUE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VR_BCM_REQUEST_SIGNAL_GROUP_WIPER_MIST_REQUEST_VCU</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">WINDOW_CONTROL_REQUEST_SIGNAL_GROUP_DRIVER_WINDOW_INFOTAINMENT_COMFORT_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">WINDOW_CONTROL_REQUEST_SIGNAL_GROUP_PASSENGER_WINDOW_INFOTAINMENT_COMFORT_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">WINDOW_CONTROL_REQUEST_SIGNAL_GROUP_REAR_LEFT_WINDOW_INFOTAINMENT_COMFORT_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">WINDOW_CONTROL_REQUEST_SIGNAL_GROUP_REAR_RIGHT_WINDOW_INFOTAINMENT_COMFORT_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">WIPER_MIST_CONTROL_AVAILABLE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">WIPER_SERVICE_UP_PARKING_STATUS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">WIPER_STATUS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_BRIGHTNESS_LEVEL_LED_1_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_BRIGHTNESS_LEVEL_LED_2_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_BRIGHTNESS_LEVEL_LED_3_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_BRIGHTNESS_LEVEL_LED_4_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_BRIGHTNESS_LEVEL_LED_5_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_BRIGHTNESS_LEVEL_LED_6_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_BRIGHTNESS_LEVEL_LED_7_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_BRIGHTNESS_LEVEL_LED_8_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_BRIGHTNESS_LEVEL_LED_9_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_BRIGHTNESS_LEVEL_LED_10_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_BRIGHTNESS_LEVEL_LED_11_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_RED_COLOR_VALUE_LED_1_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_RED_COLOR_VALUE_LED_2_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_RED_COLOR_VALUE_LED_3_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_RED_COLOR_VALUE_LED_4_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_RED_COLOR_VALUE_LED_5_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_RED_COLOR_VALUE_LED_6_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_RED_COLOR_VALUE_LED_7_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_RED_COLOR_VALUE_LED_8_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_RED_COLOR_VALUE_LED_9_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_RED_COLOR_VALUE_LED_10_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_RED_COLOR_VALUE_LED_11_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_GREEN_COLOR_VALUE_LED_1_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_GREEN_COLOR_VALUE_LED_2_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_GREEN_COLOR_VALUE_LED_3_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_GREEN_COLOR_VALUE_LED_4_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_GREEN_COLOR_VALUE_LED_5_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_GREEN_COLOR_VALUE_LED_6_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_GREEN_COLOR_VALUE_LED_7_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_GREEN_COLOR_VALUE_LED_8_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_GREEN_COLOR_VALUE_LED_9_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_GREEN_COLOR_VALUE_LED_10_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_GREEN_COLOR_VALUE_LED_11_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_BLUE_COLOR_VALUE_LED_1_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_BLUE_COLOR_VALUE_LED_2_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_BLUE_COLOR_VALUE_LED_3_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_BLUE_COLOR_VALUE_LED_4_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_BLUE_COLOR_VALUE_LED_5_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_BLUE_COLOR_VALUE_LED_6_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_BLUE_COLOR_VALUE_LED_7_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_BLUE_COLOR_VALUE_LED_8_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_BLUE_COLOR_VALUE_LED_9_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_BLUE_COLOR_VALUE_LED_10_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_BLUE_COLOR_VALUE_LED_11_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_LED_1_AVAILABILITY_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_LED_2_AVAILABILITY_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_LED_3_AVAILABILITY_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_LED_4_AVAILABILITY_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_LED_5_AVAILABILITY_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_LED_6_AVAILABILITY_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_LED_7_AVAILABILITY_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_LED_8_AVAILABILITY_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_LED_9_AVAILABILITY_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_LED_10_AVAILABILITY_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_LED_11_AVAILABILITY_BCM</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SEAT_CUSHION_AND_BACK_VENTED_LEVEL_CONTROL</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SEAT_BACK_HEATED_LEVEL_CONTROL</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SEAT_BACK_AND_CUSHION_HEATED_LEVEL_CONTROL</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">DRIVER_HEATED_COOLED_SEAT_LEVEL</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PASSENGER_HEATED_COOLED_SEAT_LEVEL</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_RIGHT_HEATED_COOLED_SEAT_LEVEL</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_LEFT_HEATED_COOLED_SEAT_LEVEL</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">THIRD_ROW_RIGHT_HEATED_COOLED_SEAT_LEVEL</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">THIRD_ROW_LEFT_HEATED_COOLED_SEAT_LEVEL</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">DRIVER_HEATED_COOLED_SEAT_MODE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PASSENGER_HEATED_COOLED_SEAT_MODE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_RIGHT_HEATED_COOLED_SEAT_MODE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">REAR_LEFT_HEATED_COOLED_SEAT_MODE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">THIRD_ROW_RIGHT_HEATED_COOLED_SEAT_MODE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">THIRD_ROW_LEFT_HEATED_COOLED_SEAT_MODE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">PEDESTRIAN_WARNING_INDICATION_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_LED1_RGBB</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_LED2_RGBB</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_LED3_RGBB</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_LED4_RGBB</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_LED5_RGBB</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_LED6_RGBB</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_LED7_RGBB</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_LED8_RGBB</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_LED9_RGBB</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_LED10_RGBB</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_LED11_RGBB</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ILS_AMBIENT_LIGHT_RGB_COLOR_VALUE_SETTING_REQUEST_SERVICE_VCU</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HEATED_SEAT_CONFIGURATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HEATED_SEAT_AVAILABLE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VENT_SEAT_CONFIGURATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VENT_SEAT_AVAILABLE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HEATED_SEAT_INDICATION_CONTROL_VALIDITY</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">COOLED_SEAT_INDICATION_CONTROL_VALIDITY</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HVAC_SEAT_TEMPERATURE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CONTROL_CAR_CLIMATE</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SEAT_PASSENGER_COMPARTMENT_MODE_NOTIFICATION_HMI_DISPLAY_COMMAND</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SEAT_PASSENGER_COMPARTMENT_MODE_RECALL_RESPONSE_STATUS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SEAT_PASSENGER_COMPARTMENT_MODE_ROOF_CONTROL_SWITCH_SELECTED_STATUS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SEAT_PASSENGER_COMPARTMENT_MODE_CURRENT_MODE_STATUS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">DRIVER_SEAT_MEMORY_RECALL_STATUS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VIRTUAL_CONTROL_HEAD_AND_PARK_LAMPS_REQUEST_AUTHENTICATED</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HEAD_AND_PARK_LAMPS_CURRENT_SELECTION_VALUE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VIRTUAL_CONTROL_FOG_LAMPS_FRONT_STATUS_CONTROL_AVAILABLE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VIRTUAL_CONTROL_FOG_LAMPS_REAR_STATUS_CONTROL_AVAILABLE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VIRTUAL_CONTROL_FOG_LAMPS_FRONT_STATUS_USER_CONTROL_ALLOWED</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VIRTUAL_CONTROL_FOG_LAMPS_REAR_STATUS_USER_CONTROL_ALLOWED</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VIRTUAL_CONTROL_FOG_LAMPS_FRONT_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VIRTUAL_CONTROL_FOG_LAMPS_REAR_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VIRTUAL_CONTROL_FOG_LAMPS_FRONT_STATUS_CURRENT_SELECTION_VALUE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VIRTUAL_CONTROL_FOG_LAMPS_REAR_STATUS_CURRENT_SELECTION_VALUE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VIRTUAL_CONTROL_DOME_LIGHT_STATUS_DOME_LIGHT_AVAILABLE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VIRTUAL_CONTROL_DOME_LIGHT_STATUS_DOME_LIGHT_CURRENT_SELECTION_VALUE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VIRTUAL_CONTROL_DOME_LIGHT_STATUS_DOME_DEFEAT_AVAILABLE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VIRTUAL_CONTROL_DOME_LIGHT_STATUS_DOME_DEFEAT_CURRENT_SELECTION_VALUE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VIRTUAL_CONTROL_DOME_LIGHT_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VEHICLE_THEFT_NOTIFICATION_SIGNAL_GROUP_FTP_VCU_CONTROL_CONFIGURATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VEHICLE_THEFT_NOTIFICATION_SIGNAL_GROUP_FTP_CONTROL_AVAILABLE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VCU_EXTERIOR_LAMP_SWITCH_REQUEST_SIGNAL_GROUP_FTP_VCU_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VEHICLE_THEFT_NOTIFICATION_SIGNAL_GROUP_HAZARD_LAMP_VCU_CONTROL_CONFIGURATION</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VEHICLE_THEFT_NOTIFICATION_SIGNAL_GROUP_HAZARD_LAMP_CONTROL_AVAILABLE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VCU_EXTERIOR_LAMP_SWITCH_REQUEST_SIGNAL_GROUP_HAZARD_LAMP_VCU_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">HAZARD_SWITCH_ACTIVE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">INFOTAINMENT_HEATED_STEERING_WHEEL_LEVEL_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VIRTUAL_CONTROL_AUTO_HIGH_BEAM_STATUS_USER_CONTROL_ALLOWED</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VIRTUAL_CONTROL_AUTO_HIGH_BEAM_STATUS_CONTROL_AVAILABLE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VIRTUAL_CONTROL_AUTO_HIGH_BEAM_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">VIRTUAL_CONTROL_AUTO_HIGH_BEAM_STATUS_CURRENT_SELECTION_VALUE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SECOND_ROW_COMFORT_MODE_MUTE_REQUEST_INFO</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SECOND_ROW_COMFORT_MODE_REQUEST_INFO</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SECOND_ROW_COMFORT_MODE_AVAILABLE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SECOND_ROW_COMFORT_MODE_FLAG</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SECOND_ROW_COMFORT_MOTION_STATUS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SECOND_ROW_CURRENT_MODE</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">SECOND_ROW_COMFORT_MODE_REMIND_INFO</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MIRROR_POSITION_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">MIRROR_POSITION_STATUS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">DRIVER_SEAT_POSITION_REQUEST</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">DRIVER_SEAT_POSITON_STAUTS</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">DRIVER_WINDOW_AVAILABLE</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">android.car.permission.CAR_VENDOR_EXTENSION</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>6</ActiveRow>
+     <ActiveCol>4</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

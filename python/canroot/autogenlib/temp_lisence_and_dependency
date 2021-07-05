@@ -1,0 +1,15 @@
+/*
+ * Copyright (C) PATAC Global Technology Operations LLC 2020.
+ * All Rights Reserved.
+ * PATAC Confidential Restricted.
+ */
+package patac.car.property.wrapper;
+
+import vendor.gm.vehicle.V1_0.VendorProperty;
+import vendor.patac.vehicle.V1_0.PatacProperty;
+import android.car.VehicleAreaSeat;
+import android.car.VehiclePropertyIds;
+
+public class #categoryProperties {
+
+}

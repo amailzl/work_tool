@@ -1,0 +1,37 @@
+
+public class AutoSetSpeedProperty extends PropertyBase{
+
+    public AutoSetSpeedProperty(CarPropertyWrapper carPropertyWrapper){
+        super(carPropertyWrapper);
+        TAG = "ADAPTIVE_CRUISE_CONTROL_AUTO_SET_SPEED_CUSTOMIZATION";
+        mCustomOnChangeEventHandler = false;
+        mOnChangeEventListenerID = PatacProperty.ADAPTIVE_CRUISE_CONTROL_AUTO_SET_SPEED_CUSTOMIZATION;
+        initPropertyBase(PatacProperty.ADAPTIVE_CRUISE_CONTROL_AUTO_SET_SPEED_CUSTOMIZATION);
+    }
+
+    public void setAutoSetSpeed(int area, boolean value) {
+        setPropertyValue(PatacProperty.ADAPTIVE_CRUISE_CONTROL_AUTO_SET_SPEED_CUSTOMIZATION,
+                area,
+                value);
+    }
+
+    public boolean getAutoSetSpeed(int area) {
+        CarPropertyValue carPropertyValue = getPropertyValue(PatacProperty.ADAPTIVE_CRUISE_CONTROL_AUTO_SET_SPEED_CUSTOMIZATION, area);
+
+        if (!checkIfCarPropertyValueValid(carPropertyValue)) {
+            Log.e(TAG, "Failed to get ADAPTIVE_CRUISE_CONTROL_AUTO_SET_SPEED_CUSTOMIZATION in getAutoSetSpeed for area  "  + area);
+            return false;
+        }
+
+        return ((boolean) carPropertyValue.getValue());
+    }
+
+    public void registerAppDataListener(int area, VehicleDataListener listener) {
+        registerAppListener(mOnChangeEventListenerID, area, listener);
+    }
+
+    public void unregisterAppDataListener(int area) {
+        unregisterAppListener(mOnChangeEventListenerID, area);
+    }
+
+}
